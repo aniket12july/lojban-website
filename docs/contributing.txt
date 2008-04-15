@@ -1,0 +1,37 @@
+
+Quick start guide to get a copy up and running:
+
+1.  Pull the code:
+
+    git clone git@github.com:JimDabell/lojban-website.git
+
+2.  Configure settings:
+
+    Copy lojban/settings_local.py.dist to lojban/settings_local.py.
+    Edit lojban/settings_local.py and fill in the appropriate settings.
+
+3.  Initialise the database:
+
+    [Create the database and put the connection details into lojban/settings_local.py.]
+    python lojban/manage.py syncdb
+
+4.  Run the development server:
+
+    python lojban/manage.py runserver
+
+
+There's a few quick guidelines for contributing that I find help things run smoothly.
+
+Meaningful commit messages are nice to have, but not vital.  If you find yourself unable to say anything specific, it can be a sign you're lumping too many unrelated changes together.  Consider committing more often, when you complete specific tasks.
+
+Any changes that aren't just drop-in-and go, e.g. database schema changes, should be noted in docs/news.txt along with a timestamp.  Same goes for anything you want to call particular attention to.  Newest items go first.
+
+If you put in a temporary workaround that you intend to fix later, put FIXME in a comment by it and consider creating a ticket for it.
+
+Please try to check in only valid HTML and CSS, but don't tie yourself in a knot trying to get it that way - it's better to check in invalid code that does something than to put it off until you can figure out how to do it in a valid way.
+
+Discussion should happen on the website development mailing list available here:
+
+http://list.lojban.jim.dabell.name/listinfo/lojban-website
+
+Any contributions must be either free from copyright or have their license and copyright holder(s) noted.  By contributing, you affirm that this is the case.

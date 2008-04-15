@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        {% block head %}
+            <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+            <title>{% block title %}Lojban: The Logical Language{% endblock title %}</title>
+            <link rel="stylesheet" type="text/css" href="/stylesheets/default/screen.css">
+            <link rel="shortcut icon" href="/images/icon.png" type="image/png">
+        {% endblock head %}
+    </head>
+    <body>
+        <h1><a href="/">Lojban: The Logical Language</a></h1>
+        <div id="navigation">
+            {% load navfixup %}
+            {% block navigation %}
+                {% navfixup %}
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/learning/">Learning Lojban</a></li>
+                        <li><a href="/community/">Community</a></li>
+                        <li><a href="/resources/">Further Resources</a></li>
+                    </ul>
+                {% endnavfixup %}
+                <form action="/search/" method="get" id="search">
+                    <fieldset>
+                        <input type="text" name="keywords" id="keywords">
+                        <button type="submit" class="search">Search <img src="/images/search.png" alt=""></button>
+                    </fieldset>
+                </form>
+            {% endblock navigation %}
+        </div>
+        <div id="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        <div id="aux">
+            {% block aux %}
+            {% endblock aux %}
+        </div>
+        <div id="about">
+            {% block about %}
+                <a href="/about/">About this website…</a>
+                <div id="notes">
+                    <a href="/notes/">Development notes…</a>
+                </div>
+            {% endblock about %}
+        </div>
+        {% block javascript %}
+            <script src="/javascript/jquery.js" type="application/ecmascript"></script>
+        {% endblock javascript %}
+    </body>
+</html>

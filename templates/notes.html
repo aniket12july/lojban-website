@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Lojban website development notes{% endblock title %}
+
+{% block content %}
+    <div>
+        <h2>Development Notes</h2>
+        <p>
+            I've been playing around with a few ideas for the Lojban website, and I set this up temporarily to get a bit of feedback.  It's only a rough draft at the moment, so I haven't done any browser testing or compatibility work.  I'm developing with Firefox 2 at 1280x1024, but you shouldn't have any serious problems with any modern browser with default settings.  It's likely to fall apart in Internet Explorer unless you are using a version 8 beta.  For people having difficulty, take a look at <a href="/images/screenshot.png">the screenshot</a>.
+        </p>
+        <h3>Goals for the website</h3>
+        <ul>
+            <li>Public face of the Lojban project.</li>
+            <li>Audience is anybody new or semi-new to Lojban.</li>
+            <li>Shows people what Lojban is like.</li>
+            <li>Teaches people how to speak it.</li>
+            <li>Acts as a hub for the community.</li>
+        </ul>
+        <h3>Problems with the existing site</h3>
+        <ul>
+            <li>Overcomplicated and crowded (150 links on the homepage alone).</li>
+            <li>Material suitable for newcomers is mixed up with material only of interest to experts with no clear distinction between the two.</li>
+            <li>Lots of low quality material reducing the signal:noise ratio (outdated, irrelevant information, broken links, etc).</li>
+            <li>Incohesive; mailing list archives are dissociated from the rest of the site, same goes for the books, main vocabulary links are to unformatted text/data files.</li>
+        </ul>
+        <h3>Get involved</h3>
+        <p>
+            Patches, suggestions and criticism are all welcome.  I've set up a temporary <a href="http://list.lojban.jim.dabell.name/listinfo/lojban-website">mailing list</a> that you can subscribe to that is intended solely for the website redesign.  It's probably a good idea to catch up with <a href="http://list.lojban.jim.dabell.name/archives/lojban-website/">the archives</a> and the links to the right before posting to the list.
+        </p>
+        <p>
+            Please report any bugs, wishlist items, etc, by <a href="http://trac.lojban.jim.dabell.name/newticket">opening a new ticket</a> on <a href="http://trac.lojban.jim.dabell.name/">Trac</a>.
+        </p>
+        <p>
+            So far, the Django framework and the git revision control system have been chosen.  Right now, the pages are mostly generated from static templates.  You can pull the code from github.com with:
+        </p>
+        <pre><code>git clone git@github.com:JimDabell/lojban-website.git</code></pre>
+        <p>
+            From there, look at docs/contributing.txt.
+        </p>
+    </div>
+{% endblock content %}
+
+{% block aux %}
+    <h2>Links</h2>
+    <ul>
+        <li><a href="http://list.lojban.jim.dabell.name/listinfo/lojban-website">Subscribe to the mailing list</a></li>
+        <li><a href="http://list.lojban.jim.dabell.name/archives/lojban-website/">Mailing list archives</a></li>
+        <li><a href="http://list.lojban.jim.dabell.name/archives/lojban-website/2008-March/000000.html">Initial mailing list post</a></li>
+        <li><a href="http://www.lojban.org/tiki/tiki-index.php?page=LRWTF">Wiki page</a></li>
+        <li><a href="http://lojban.org/">Current website</a></li>
+        <li><a href="http://community.livejournal.com/lojban/35717.html">First LiveJournal post</a></li>
+        <li><a href="http://community.livejournal.com/lojban/36512.html">Second LiveJournal post</a></li>
+        <li><a href="http://www.lojban.org/no/lists/lojban-list/msg29599.html">Timo's mailing list post</a></li>
+    </ul>
+{% endblock aux %}

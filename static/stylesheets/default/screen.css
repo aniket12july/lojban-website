@@ -1,0 +1,331 @@
+
+html {
+    margin: 0;
+    padding: 2em 5em 3em 5em;
+    color: #013;
+    background: #e0f2e5;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+    html body {
+        margin: 0;
+        padding: 0 0 1em 0;
+    }
+
+        html body h1 {
+            font-size: 200%;
+            margin: 0 0 0.5em 0;
+            min-height: 50px;
+        }
+
+        /* Logo on the right-hand side. */
+        html body h1 {
+            padding: 20px 0 0 0;
+            background: url(/images/logo.png) no-repeat top right;
+        }
+        /* Logo on the right-hand side. */
+
+        /* Logo on the left-hand side. */
+        html body h1 {
+            padding: 20px 0 0 120px;
+            background: url(/images/logo.png) no-repeat top left;
+        }
+        /* Logo on the left-hand side. */
+
+            html body h1 a {
+                text-decoration: none;
+                color: inherit !important;
+            }
+
+        html body #navigation {
+            font-size: 110%;
+        }
+
+            html body #navigation ul {
+                display: table;
+                border-collapse: collapse;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                font-weight: bold;
+                border: medium solid #e9ecef;
+            }
+
+                html body #navigation ul li {
+                    display: table-cell;
+                    margin: 0;
+                    padding: 0;
+                    border: medium solid #e9ecef;
+                    width: 25%;
+                }
+
+                    html body #navigation ul li a {
+                        display: block;
+                        margin: 0;
+                        padding: 0.5em 0.75em;
+                        text-decoration: none;
+                        color: white;
+                        background: #577;
+                    }
+
+                    html body #navigation ul li a.current {
+                        color: white;
+                        background: #58a;
+                    }
+
+                    html body #navigation ul li a:link:hover,
+                    html body #navigation ul li a:visited:hover,
+                    html body #navigation ul li a:link:focus,
+                    html body #navigation ul li a:visited:focus {
+                        color: white;
+                        background-color: #58a;
+                        text-decoration: underline;
+                    }
+
+            html body #navigation #search {
+                position: absolute;
+                margin: -5.5em 0 0 0;
+                right: 5em;
+            }
+
+                html body #navigation #search fieldset {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                }
+
+        html body #content {
+            margin: 0;
+            padding: 0;
+            width: 65%;
+            float: left;
+        }
+
+            /* Indent everything relative to second-level headings. */
+            html body #content > div > * {
+                margin-right: 1em;
+                margin-left: 1em;
+            }
+
+            html body #content > div > h2 {
+                margin-right: 0;
+                margin-left: 0;
+            }
+            /* Indent everything relative to second-level headings. */
+
+            html body #content ul,
+            html body #content ol {
+                margin: 1em;
+                padding: 0 2.5em;
+            }
+
+                html body #content ul li,
+                html body #content ol li {
+                    margin: 0.75em 0;
+                }
+
+        html body #aux {
+            margin: 0;
+            padding: 0;
+            width: 30%;
+            float: right;
+        }
+
+            html body #aux #news {
+            }
+
+                html body #aux #news ol {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                    html body #aux #news ol li {
+                        display: block;
+                    }
+
+                        html body #aux #news ol li h3 {
+                            font-size: 100%;
+                            font-weight: bold;
+                            margin-bottom: 0.5em;
+                        }
+
+                        html body #aux #news ol li p {
+                            margin-top: 0.5em;
+                        }
+
+                        html body #aux #news ol li p + p {
+                            margin-top: -0.5em;
+                        }
+
+                html body #aux #news #older-news {
+                    text-align: right;
+                }
+
+        html body #about {
+            position: relative;
+            top: 3em;
+            clear: both;
+            border-top: thick solid #577;
+            padding: 0.5em 0;
+            text-align: right;
+        }
+
+        /* Temporary. */
+        html body #notes {
+            text-align: left;
+            position: relative;
+            top: -1.2em;
+            z-index: 1;
+        }
+
+        /* Temporary until #notes goes away. */
+        html body #about a {
+            z-index: 5;
+            position: relative;
+        }
+
+/* Generic. */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #044;
+}
+
+h2 {
+    border-color: transparent transparent #577 #577;
+    border-width: 0.25em;
+    border-style: solid;
+    padding: 0 0.25em;
+}
+
+[lang=jbo] {
+    font-style: italic;
+}
+
+:link {
+    color: #03a;
+}
+
+:visited {
+    color: #53a;
+}
+
+/* Forms. */
+
+input[type=text],
+input[type=password],
+textarea,
+button {
+    border: thin outset;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+input[type=text],
+input[type=password],
+textarea {
+    padding-left: 0.25em;
+    border: thin inset;
+    color: black;
+    background: #f5f5f5;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus {
+    color: black;
+    background: white;
+}
+
+button {
+    cursor: pointer;
+    padding: 0 0.5em;
+    color: black;
+    background-color: #ddd;
+}
+
+button:hover,
+button:focus {
+    color: black;
+    background-color: #eee;
+}
+
+button img {
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+}
+
+button.cancel.text {
+    color: #044;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+/* Feature-specific. */
+
+#word-of-the-day {
+}
+
+        #word-of-the-day h2 span.date {
+            font-size: 80%;
+            font-weight: normal;
+        }
+
+    #word-of-the-day h3 {
+        margin: 0.5em 0;
+    }
+
+    #word-of-the-day h3 + p {
+        margin: 0.5em 0;
+    }
+
+    #word-of-the-day img.illustration {
+        border: thin solid #577;
+        display: block;
+        margin: 1em auto;
+    }
+
+    #word-of-the-day div.example h4 {
+        margin: 0;
+    }
+
+    #word-of-the-day div.example p {
+        margin: 0 1em;
+    }
+
+    #word-of-the-day div.example img {
+        vertical-align: bottom;
+        border: 0;
+    }
+
+
+    #content #word-of-the-day #illustration a {
+        display: table;
+        margin: 1em auto 0 auto;
+    }
+
+        #content #word-of-the-day #illustration a img {
+            display: block;
+            border: thin solid;
+        }
+
+    #content #word-of-the-day #illustration p.caption {
+        text-align: center;
+        font-style: italic;
+    }
+
+
+/* Temporary until the FOUC is solved. */
+button.cancel {
+    display: none;
+}
+

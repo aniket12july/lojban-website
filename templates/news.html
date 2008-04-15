@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}News from Lojbanistan{% endblock title %}
+
+{% block head %}
+    {{block.super}}
+    <link rel="alternate" type="application/atom+xml" href="/feeds/news.atom" title="Lojban news">
+{% endblock head %}
+
+{% block content %}
+    <div>
+        <h2>News</h2>
+        <p>
+            This should merely be an archive of the "latest news" section on the front page.
+        </p>
+        {% if news_items %}
+            <ol>
+                {% for item in news_items %}
+                    <li>
+                        <h3>{{item}}</h3>
+                        {{item.text|safe}}
+                    </li>
+                {% endfor %}
+            </ol>
+        {% endif %}
+    </div>
+{% endblock content %}

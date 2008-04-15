@@ -1,0 +1,118 @@
+
+{% extends "base.html" %}
+
+{% block title %}Lojban: The Logical Language{% endblock title %}
+
+{% block head %}
+    {{block.super}}
+    <link rel="alternate" type="application/atom+xml" href="/feeds/news.atom" title="Lojban news">
+    <link rel="alternate" type="application/atom+xml" href="/feeds/word-of-the-day.atom" title="Lojban word of the day">
+{% endblock head %}
+
+{% block content %}
+    <div id="introduction">
+        <h2>What is Lojban?</h2>
+        <p>
+            Lojban is an artifical spoken and written language that has been in development for over five decades by dozens of people and hundreds of supporters.  It has a number of features that make it stand out from other languages, both natural and artificial.
+        </p>
+        <ul>
+            <li>It is simple compared with natural languages and it is relatively easy to learn.</li>
+            <li>The grammar is designed for people, but computers can also parse it easily.</li>
+            <li>It is designed to be culturally neutral and its root words are distilled from the six most widely spoken languages in the world.</li>
+            <li>It has phonetic spelling and unambiguous resolution of sounds into words.</li>
+            <li>Its 1300 root words can be easily combined to form a vocabulary of millions of words.</li>
+            <li>The grammar is unambiguous and based on predicate logic.</li>
+            <li>It is regular; there are few exceptions to the rules.</li>
+            <li>It is designed to enhance clarity of thought and communication.</li>
+        </ul>
+        <p>
+            This unique combination of features makes it useful for a variety of purposes, both creative and technical.  Some people use it to investigate scientific theories, some people write poetry with it, and some people simply indulge their inner geek with it.
+        </p>
+        <p>
+            If you'd like to find out more about Lojban, please read the <a href="/faq/">Frequently Asked Questions</a> or start <a href="/learning/">Learning Lojban</a>.
+        </p>
+    </div>
+    <div id="newcomer">
+        <h2>First time here?</h2>
+        <p>
+            Help us out by letting us know where you heard about Lojban:
+        </p>
+        <form action="/heard" method="post">
+            <p>
+                <input type="hidden" name="referrer" value="{{request.META.HTTP_REFERER}}">
+                <input type="text" name="heard">
+                <button type="submit" class="send">Submit <img src="/images/arrow-right.png" alt=""></button>
+            </p>
+            <p>
+                <button type="submit" class="cancel">I've visited before <img src="/images/cross.png" alt=""></button>
+            </p>
+        </form>
+    </div>
+{% endblock content %}
+
+{% block aux %}
+    {% if news_items %}
+        <div id="news">
+            <h2>News</h2>
+            <ol>
+                {% for item in news_items %}
+                    <li>
+                        <h3>{{item}}</h3>
+                        {{item.text|safe}}
+                    </li>
+                {% endfor %}
+            </ol>
+            <div id="older-news">
+                <a href="/news/">Older news…</a>
+            </div>
+        </div>
+    {% endif %}
+    <div id="word-of-the-day">
+        <h2>Word of the Day</h2>
+        <h3 lang="jbo">gerku</h3>
+        <p>x1 is a dog/canine/[bitch] of species/breed x2.</p>
+        <a href="/word-of-the-day/2008/March/01/"><img class="illustration" src="/images/gerku.small.jpg" alt="" width="180" height="135"></a>
+        <div class="example">
+            <h4>Example</h4>
+            <p lang="jbo">
+                le gerku cu bajra <a href="/audio/word-of-the-day/le-gerku-cu-bajra.mp3" type="audio/mp3" lang="en"><img src="/images/play-disabled.png" alt="[Listen to this being read aloud.]" title="Listen to this being spoken aloud." width="16" height="16"></a>
+            </p>
+            <p>
+                The dog runs.
+            </p>
+        </div>
+    </div>
+{% endblock aux %}
+
+{% block javascript %}
+    {{block.super}}
+    <script src="/javascript/heard.js" type="application/ecmascript"></script>
+    <script src="/javascript/audio/soundmanager2.js" type="application/ecmascript"></script>
+    <script src="/javascript/audio/listen.js" type="application/ecmascript"></script>
+{% endblock javascript %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

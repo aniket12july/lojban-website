@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}The Lojban Community{% endblock title %}
+
+{% block content %}
+    <div>
+        <h2>Seen in the Lojban Community</h2>
+        <p>
+            This section summarises the latest goings on in Lojbanistan.  It should aggregate Lojban-related feeds including the LiveJournal community and other weblogs.  The sidebar can contain the most recent mailing list subjects and other topical data (e.g. latest del.icio.us bookmarks tagged with 'lojban' and new Google hits).
+        </p>
+        <p>
+            You should also be able to sign up to the mailing list from here, view the mailing list archives, see links to the audio board, find out about IRC, etc.
+        </p>
+        <p>
+            The Lojbanic community is not really active enough to generate regular del.icio.us bookmarks etc, perhaps we can do something to foster growth in this manner?  I think the website redesign itself might do a bit to improve this, as we can show people how to get their new material linked from the main site automatically and that could encourage people to post more, or at least be more visible about it.
+        </p>
+    </div>
+{% endblock content %}
+
+{% block aux %}
+    <h2>Recent mailing list topics</h2>
+    <ul>
+        <li><a href="/">la jufra karni</a></li>
+        <li><a href="/">"coi ro do do'u"</a></li>
+        <li><a href="/">Joining the Ranks of the BPFK: The LRWTF (re-post from the lojban-list)</a></li>
+    </ul>
+    <h2>Latest del.icio.us bookmarks</h2>
+    <ul>
+        <li><a href="http://www.loglan.org/Loglan1/index.html">Loglan 1: A Logical Language</a></li>
+        <li><a href="http://www.tlg.uci.edu/~opoudjis/lojbanbrochure/lessons/book1.html">Lojban For Beginners — velcli befi la lojban. bei loi co'a cilre</a></li>
+        <li><a href="http://lojban.dabbledb.com/dabble/lojbanwordlist?view=20831&amp;_k=eqeeoqfk">Lojban Word List (Dabble DB)</a></li>
+        <li><a href="http://ptolemy.tlg.uci.edu/~opoudjis/Play/lojban.html">Nick Nicholas' Lojban page</a></li>
+    </ul>
+    <h2>New Google hits</h2>
+    <ul>
+        <li><a href="/">One</a></li>
+        <li><a href="/">Two</a></li>
+        <li><a href="/">Three</a></li>
+    </ul>
+{% endblock aux %}

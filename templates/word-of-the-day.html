@@ -1,0 +1,48 @@
+
+{% extends "base.html" %}
+
+{% block title %}Word of the Day — 1st of March 2008{% endblock title %}
+
+{% block content %}
+    <div id="word-of-the-day">
+        <h2>Word of the Day <span class="date">— 1st of March 2008</span></h2>
+        <h3 lang="jbo">gerku</h3>
+        <p>x1 is a dog/canine/[bitch] of species/breed x2.</p>
+        <div class="example">
+            <h4>Example</h4>
+                <p lang="jbo">
+                le gerku cu bajra <a href="/audio/word-of-the-day/le-gerku-cu-bajra.mp3" type="audio/mp3"><img src="/images/play-disabled.png" alt="[Listen to this being read aloud.]" title="Listen to this being spoken aloud." width="16" height="16"></a>
+            </p>
+            <p>
+                The dog runs.
+            </p>
+        </div>
+        <div id="illustration">
+            <a href="/images/gerku.original.jpg"><img src="/images/gerku.large.jpg" alt="[Photograph of a dog running.]" title="Brittany - Running at the park"></a>
+            <p class="caption">
+                Brittany - Running at the park
+            </p>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block aux %}
+    <div id="illustration-credit">
+        <h2>Credits</h2>
+        <p>
+            The photograph was taken by <a href="http://flickr.com/people/emanuele75/">Emanuele F</a> and made available <a href="http://flickr.com/photos/emanuele75/246019090/">on Flickr</a> under the terms of <a href="http://creativecommons.org/licenses/by/2.0/deed.en_GB">the Creative Commons Attribution 2.0 Generic license</a>.
+        </p>
+        <p>
+            The example sentence and audio recording were provided by <a href="http://example.com/">John Doe</a> under the terms of <a href="http://creativecommons.org/licenses/by/3.0/">the Creative Commons Attribution 3.0 Unported license</a>.
+        </p>
+        <p>
+            Thank you, Emanuele and John!
+        </p>
+    </div>
+{% endblock aux %}
+
+{% block javascript %}
+    {{block.super}}
+    <script src="/javascript/audio/soundmanager2.js" type="application/ecmascript"></script>
+    <script src="/javascript/audio/listen.js" type="application/ecmascript"></script>
+{% endblock javascript %}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+<svg version="1.1"
+    baseProfile="tiny"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 300 200"
+    width="300"
+    height="200"
+    preserveAspectRatio="xMidYMid">
+
+    <defs>
+        <circle id="circle" r="60" stroke="#55c" stroke-width="10" fill="none" />
+        <circle id="inner-circle" r="55" fill="#ddf" />
+        <g id="arrow">
+            <rect fill="#e55" width="120" height="10" />
+            <path d="M 0,0 L -16,10 L 0,20 L -4,10 z" transform="translate(10,-10) scale(1.5)" fill="#e55" />
+        </g>
+    </defs>
+
+    <use xlink:href="#inner-circle" transform="translate(110, 100)" />
+    <use xlink:href="#inner-circle" transform="translate(190, 100)" />
+    <use xlink:href="#circle" transform="translate(110, 100)" />
+    <use xlink:href="#circle" transform="translate(190, 100)" />
+    <use xlink:href="#arrow" transform="translate(270, 105) rotate(180)"/>
+    <use xlink:href="#arrow" transform="translate(30, 95)"/>
+    <use xlink:href="#arrow" transform="translate(155, 20) rotate(90)"/>
+    <use xlink:href="#arrow" transform="translate(145, 180) rotate(-90)"/>
+</svg>
