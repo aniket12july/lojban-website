@@ -21,7 +21,8 @@ class NewsItem(models.Model):
             return dateformat.format(self.pub_date, "l d F Y")
 
     class Admin:
-        pass
+        list_filter = ("pub_date",)
+        date_hierarchy = "pub_date"
 
 class Gismu(models.Model):
     name = models.CharField(max_length=5)
