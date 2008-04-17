@@ -15,7 +15,11 @@ Quick start guide to get a copy up and running:
     [Create the database and put the connection details into lojban/settings_local.py.]
     python lojban/manage.py syncdb
 
-4.  Run the development server:
+4.  Import the initial data:
+
+    python lojban/manage.py loaddata valsi
+
+5.  Run the development server:
 
     python lojban/manage.py runserver
 

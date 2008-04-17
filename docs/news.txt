@@ -3,6 +3,17 @@
 
 2008-04-17:
 
+* A customised action has been added that downloads data from jbovlaste and generates a fixture containing all the valsi.  You shouldn't have to run it yourself as a copy of the fixture has been checked in.  You will still have to use loaddata to get it into the database though.
+
+    python lojban/manage.py generate-valsi-fixture
+    python lojban/manage.py loaddata valsi
+
+    Note that Django bug #5825 prevents customised actions from working.  In order for generate-valsi-fixture to work, you need to edit django/core/management/__init__.py and comment out sys.path.pop() in setup_environ().  See http://code.djangoproject.com/ticket/5825 for more details.
+
+--------------------
+
+2008-04-17:
+
 * New models for various other types of valsi have been added.
 
     python lojban/manage.py syncdb
