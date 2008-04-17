@@ -3,6 +3,14 @@
 
 2008-04-17:
 
+* New models for various other types of valsi have been added.
+
+    python lojban/manage.py syncdb
+
+--------------------
+
+2008-04-17:
+
 * The `place_structure` CharField for the Gismu model has changed to the `definition` TextField.
 
     python lojban/manage.py dbshell

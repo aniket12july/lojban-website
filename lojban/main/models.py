@@ -55,6 +55,101 @@ class Gismu(models.Model):
         list_display = ("name", "cvc_rafsi", "ccv_rafsi", "cvv_rafsi", "english_keyword", "hint", "_friendly_definition")
         search_fields = ("name", "cvc_rafsi", "ccv_rafsi", "cvv_rafsi", "english_keyword", "hint", "definition", "notes")
 
+class Selmaho(models.Model):
+    name = models.CharField(max_length=10)
+
+    class Meta:
+        verbose_name_plural = "selma'o"
+        ordering = ("name",)
+
+    def __unicode__(self):
+        return self.name
+
+    class Admin:
+        search_fields = ("name",)
+
+class Cmavo(models.Model):
+    name = models.CharField(max_length=10)
+    definition = models.TextField()
+    notes = models.TextField(blank=True)
+    selmaho = models.ForeignKey(Selmaho, verbose_name="selma'o")
+    official = models.BooleanField(default=True)
+
+    def _friendly_definition(self):
+        return friendly_sumti_regexp.sub(r'\1\2', self.definition)
+    _friendly_definition.short_description = "Definition"
+    friendly_definition = property(_friendly_definition)
+
+    def _friendly_notes(self):
+        return friendly_sumti_regexp.sub(r'\1\2', self.notes)
+    _friendly_notes.short_description = "Notes"
+    friendly_notes = property(_friendly_notes)
+
+    class Meta:
+        verbose_name_plural = "cmavo"
+        ordering = ("name",)
+
+    def __unicode__(self):
+        return self.name
+
+    class Admin:
+        list_display = ("name", "selmaho", "_friendly_definition")
+        list_filter = ("selmaho",)
+        search_fields = ("name", "selmaho", "definition", "notes")
+
+class Lujvo(models.Model):
+    name = models.CharField(max_length=50)
+    definition = models.TextField()
+    notes = models.TextField(blank=True)
+
+    def _friendly_definition(self):
+        return friendly_sumti_regexp.sub(r'\1\2', self.definition)
+    _friendly_definition.short_description = "Definition"
+    friendly_definition = property(_friendly_definition)
+
+    def _friendly_notes(self):
+        return friendly_sumti_regexp.sub(r'\1\2', self.notes)
+    _friendly_notes.short_description = "Notes"
+    friendly_notes = property(_friendly_notes)
+
+    class Meta:
+        verbose_name_plural = "lujvo"
+        ordering = ("name",)
+
+    def __unicode__(self):
+        return self.name
+
+    class Admin:
+        list_display = ("name", "_friendly_definition")
+        search_fields = ("name", "definition", "notes")
+
+class Fuhivla(models.Model):
+    name = models.CharField(max_length=50)
+    definition = models.TextField()
+    notes = models.TextField(blank=True)
+
+    def _friendly_definition(self):
+        return friendly_sumti_regexp.sub(r'\1\2', self.definition)
+    _friendly_definition.short_description = "Definition"
+    friendly_definition = property(_friendly_definition)
+
+    def _friendly_notes(self):
+        return friendly_sumti_regexp.sub(r'\1\2', self.notes)
+    _friendly_notes.short_description = "Notes"
+    friendly_notes = property(_friendly_notes)
+
+    class Meta:
+        verbose_name_plural = "fu'ivla"
+        ordering = ("name",)
+
+    def __unicode__(self):
+        return self.name
+
+    class Admin:
+        list_display = ("name", "_friendly_definition")
+        search_fields = ("name", "definition", "notes")
+
+
 class WordOfTheDay(models.Model):
     gismu = models.ForeignKey(Gismu)
     pub_date = models.DateField("Date published", auto_now_add=True)
