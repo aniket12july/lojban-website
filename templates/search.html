@@ -1,12 +1,48 @@
 {% extends "base.html" %}
 
-{% block title %}Search Results{% endblock title %}
+{% block title %}Search results for {{request.GET.keywords}}{% endblock title %}
 
 {% block content %}
     <div>
-        <h2>Search Results</h2>
+        <h2>Search results for {{request.GET.keywords}}</h2>
         <p>
             This should return categorised search results.  For instance, if a single keyword was put in, it should look for it in gismu/lujvo/cmavo/etc definitions, word of the day entries, etc, and have those results clearly distinguished from normal full-text searching.  We should consider going to the website, putting in a word and finding its definition to be a common pattern we should optimise for.
         </p>
+        {% if matches %}
+            {% for valsi, valsi_type in matches %}
+                <table>
+                    <tr>
+                        <th scope="row" width="16.66%">Name</th>
+                        <td colspan="3" width="50%"><strong>{{valsi.name}}</strong></td>
+                        <th scope="row" width="16.66%">Type</th>
+                        <td width="16.66%">{{valsi_type}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" width="16.66%">Definition</th>
+                        <td colspan="5" width="84.33%">{{valsi.friendly_definition}}</td>
+                    </tr>
+                    {% ifequal valsi_type "gismu" %}
+                        <tr>
+                            <th scope="row" width="16.66%">CVC rafsi</th>
+                            <td width="16.66%">{{valsi.cvc_rafsi}}</td>
+                            <th scope="row" width="16.66%">CCV rafsi</th>
+                            <td width="16.66%">{{valsi.ccv_rafsi}}</td>
+                            <th scope="row" width="16.66%">CVV rafsi</th>
+                            <td width="16.66%">{{valsi.cvv_rafsi}}</td>
+                        </tr>
+                    {% endifequal %}
+                    {% if valsi.notes %}
+                        <tr>
+                            <th scope="row" width="16.66%">Notes</th>
+                            <td colspan="5" width="84.33%">{{valsi.friendly_notes|safe}}</td>
+                        </tr>
+                    {% endif %}
+                </table>
+            {% endfor %}
+        {% else %}
+            <p>
+                Sorry, nothing matching your query was found.
+            </p>
+        {% endif %}
     </div>
 {% endblock content %}

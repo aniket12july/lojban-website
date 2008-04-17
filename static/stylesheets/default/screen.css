@@ -88,12 +88,6 @@ html {
                 right: 5em;
             }
 
-                html body #navigation #search fieldset {
-                    border: 0;
-                    margin: 0;
-                    padding: 0;
-                }
-
         html body #content {
             margin: 0;
             padding: 0;
@@ -323,6 +317,28 @@ button.cancel.text {
         font-style: italic;
     }
 
+table {
+    margin: 1em;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    color: white;
+    background: #577;
+    text-align: left;
+    vertical-align: top;
+}
+
+th:after {
+    content: ":";
+}
+
+th,
+td {
+    padding: 0.25em 0.5em;
+    border: thin solid #577;
+}
 
 /* Temporary until the FOUC is solved. */
 button.cancel {

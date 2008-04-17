@@ -22,10 +22,10 @@
                     </ul>
                 {% endnavfixup %}
                 <form action="/search/" method="get" id="search">
-                    <fieldset>
-                        <input type="text" name="keywords" id="keywords">
+                    <div>
+                        <input type="text" name="keywords" id="keywords" value="{{request.GET.keywords}}">
                         <button type="submit" class="search">Search <img src="/images/search.png" alt=""></button>
-                    </fieldset>
+                    </div>
                 </form>
             {% endblock navigation %}
         </div>
