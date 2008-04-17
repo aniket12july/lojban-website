@@ -1,0 +1,307 @@
+<django-objects version="1.0">
+    <object pk="30" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2008-03-13 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+la xris and la timos started a new project! Learn one new word every day by reading the blog at &lt;a href="http://valsi.blogspot.com" lang="jbo"&gt;ko facki fi lo tolslabu valsi&lt;/a&gt;. There is also &lt;a href="http://valsi.blogspot.com/feeds/posts/default"&gt;an atom feed&lt;/a&gt; available.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="29" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2007-05-13 23:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+Today, Timo and Cizra released their animation short &lt;strong lang="jbo"&gt;lai citno melbi pinpedi&lt;/strong&gt;. You can &lt;a href="http://video.google.com/videoplay?docid=1710885982433758647"&gt;watch it on Google Video now&lt;/a&gt;! If that title sounds familiar, you may have seen &lt;a href="http://perpetuum-immobile.de/komo.png"&gt;this comic strip&lt;/a&gt; before.
+&lt;/p&gt;
+&lt;p&gt;
+In other news, the same Timo has been busy creating Jbobac, a Lojbanic audio board that anyone can post to. Just point your browser to &lt;a href="http://jbobac.lojban.org/"&gt;http://jbobac.lojban.org/&lt;/a&gt;, and join the action!
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="28" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2006-12-01 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+&lt;a href="http://xkcd.com/c191.html"&gt;Welcome, xkcd readers&lt;/a&gt;! Join some &lt;a href="/community/"&gt;Lojbanic Forums&lt;/a&gt;. The Lojban-speaking community loves xkcd, so getting xkcd'ed is as good as getting Slashdotted, Dugg or Farked. The author of xkcd is expressing a sentiment similar to Groucho Marx's statement, "I don't care to belong to a club that accepts people like me as members." :) We can definitely laugh at ourselves, and exposure to xkcd's target audience (math, linguistics, and sarcasm) will probably result in at least one more participant in our hobby.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="27" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2006-10-27 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+&lt;strong&gt;Today&lt;/strong&gt; I'm going to send in the Lojban group registration for Philcon. Email me your name and address and PayPal your registration now. I mean right now!
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="26" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2006-10-20 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+Only &lt;strong&gt;one week left&lt;/strong&gt; to get in on the Lojban group's discount rate to register for &lt;a href="http://www.philcon.org/"&gt;Philcon&lt;/a&gt; in Philadelphia, the science fiction convention where the annual Lojban Festival will be held on November 17 through 19. See &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=jbonunsla+2006"&gt;jbonunsla 2006&lt;/a&gt; for details, including our stellar Lojbanic guest list and schedule of events. We now have two rooms to put you up in if your expenses are tight. You can still register after we send in the group registration, but it will cost more. It might be the most fun Lojbanic meeting ever. I'm serious, now is the time to get in on this! -Eppcott
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="25" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2006-10-03 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+&lt;a href="http://community.livejournal.com/lojban"&gt;The Lojban community blog on Livejournal&lt;/a&gt; is now embedded on the Lojban homepage, as part of the plan discussed in &lt;a href="http://community.livejournal.com/lojban/8245.html"&gt;Friday's entry&lt;/a&gt;. Prepare for a digest of all the Lojbanic goodness the web has to offer! You don't have to have a Livejournal account to subscribe to &lt;a href="http://community.livejournal.com/lojban/data/atom"&gt;the web feed&lt;/a&gt;. You do need an LJ account to post, but if you don't want to get an LJ account you can just send your contribution to &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=Matt+Arnold"&gt;Matt Arnold&lt;/a&gt; who will post it to the blog for you.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="24" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2006-09-12 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+Lojban was mentioned in an article in the Wall Street Journal, &lt;a href="http://online.wsj.com/google_login.html?url=http%3A%2F%2Fonline.wsj.com%2Farticle%2FSB115802923001560290.html%3Fmod%3Dgooglenews_wsj"&gt;"How Hartmut Pilch, Avid Computer Geek, Bested Microsoft"&lt;/a&gt;, by Mary Jacoby. The free sample text made available online reads as follows:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+BRUSSELS — A proposal here to create a new European patents court has the support of Microsoft Corp., Siemens AG and many other giants of Western industry. But can it survive an attack from Hartmut Pilch?
+&lt;/p&gt;
+&lt;p&gt;
+A 43-year-old linguist from Munich, Mr. Pilch speaks Chinese, Japanese and an artificial language called Lojban intended to eliminate ambiguity and promoted by some programmers. He is the unlikely leader of a movement of self-styled computer geeks out to sink a patents plan they say would stifle software programmers.
+&lt;/p&gt;
+&lt;p&gt;
+"Patents on software mean any programmer can be sued at any time," says Mr. Pilch, …
+&lt;/p&gt;
+&lt;/blockquote&gt;
+</field>
+    </object>
+    <object pk="23" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2006-08-28 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+The next Lojban Fest for 2006 will be held at &lt;a href="http://www.philcon.org/"&gt;Philcon in Philadelphia, November 17 through 19, 2006. Check out the page &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=jbonunsla+2006"&gt;jbonunsla 2006&lt;/a&gt; for the schedule and attendees so far, as well as registration details. Newcomers are especially welcome to join us! Keep checking the schedule as we continue to work with &lt;a href="http://www.kli.org/"&gt;the Klingon Language Institute&lt;/a&gt; about the possibility of collaborative content between Lojban and Klingon at Philcon!
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="22" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2006-07-20 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+Have you visited the land where Lojban is spoken? It's called &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=samxarmuj"&gt;samxarmuj&lt;/a&gt;, meaning "computerized imaginary universe". It's a text-based world on the internet, where you can operate a character using commands in either English or Lojban: the online software is bilingual. Lojban is like the language of magic in samxarmuj--speaking it can bring objects into existence and give them form and function.
+&lt;/p&gt;
+&lt;p&gt;
+You don't even need a plane ticket. Just &lt;a href="http://teddyb.org/cgi-bin/moo_ssh.html"&gt;click here&lt;/a&gt; and use the password "moo" to log in as a guest until you have your own account. Commands are typed in the bottom-most part of the window. Guest accounts are limited to using English, so type the "register" command to get your own account. It's totally free.
+&lt;/p&gt;
+&lt;p&gt;
+More information, including other ways to access samxarmuj, is available at the wiki page about &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=The+Lojban+MOO"&gt;The Lojban MOO&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Intense labor on the part of many skilled programmers in our community has brought forth one of the most exciting venues in which to use Lojban that this language has ever had. Today, the software leaves Beta. It is with bated breath that we launch this massively multiplayer system and declare it ready for the public. But now we need to massively populate it.
+&lt;/p&gt;
+&lt;p&gt;
+We are currently summoning new mages of every skill level. Come build your own part of the land. Although you do not have to speak Lojban to adventure in the land as it forms out of the nothingness around us, all spells must be cast in correct Lojban. Whatever power hears our descriptions of samxarmuj, and turns them into reality, will respond to no other language.
+&lt;/p&gt;
+&lt;p&gt;
+This land also welcome tourists with no skill in Lojban at all. Feel free to ask us any question about how to use the system. With enough interest, we may even be able to establish the Lojbanic equivalent of a Hogwarts academy for novice Lojban magicians! Who knows? Welcome to &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=samxarmuj"&gt;samxarmuj&lt;/a&gt;! Go native!
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="21" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2006-05-04 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+&lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=jbonunsla+2006"&gt;jbonunsla 2006&lt;/a&gt; was held at &lt;a href="http://www.penguicon.org/"&gt;Penguicon&lt;/a&gt; in Michigan, April 21-23 2006. Next up for jbonunsla 2006 will be &lt;a href="http://www.philcon.org/2006/"&gt;Philcon 2006&lt;/a&gt; in November!
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="20" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2006-03-24 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+&lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=jbonunsla+2006"&gt;jbonunsla 2006&lt;/a&gt;, a celebration of the Logical Language, will be held at the science fiction convention and open source software expo &lt;a href="http://www.penguicon.org/"&gt;Penguicon&lt;/a&gt; in Michigan, April 21-23 2006. This does not exclude others hosting LogFests of their own in 2006.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="19" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2006-01-04 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+&lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=Logfest"&gt;Logfest&lt;/a&gt; was held at PhilCon in Philadelphia from December 9th to December 11th. It was a quite successful event, despite a turnout that was a bit lower than expected. More details in the page about &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=Logfest+2005"&gt;Logfest 2005&lt;/a&gt;.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="18" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2005-11-13 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+As the Secretary, I apologize for the lateness of this announcement, but I only got full confirmation 10 days ago myself.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="http://www.philcon.org/2005/"&gt;Philcon - The Philadelphia Conference of Science Fiction and Fantasy&lt;/a&gt; has agreed to have a room set aside for LogFest 2005!
+&lt;/p&gt;
+&lt;p&gt;
+Philcon 2005 is being held at the Philadelphia Marriott Downtown on December 9th-11th, 2005. That's &lt;strong&gt;IN 26 DAYS!&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;
+I know that's really, really short notice, but if we can get enough people to show up, they'll do it for us next year too, and hopefully that relationship will continue far into the future.
+&lt;/p&gt;
+&lt;p&gt;
+People showing up for LogFest &lt;strong&gt;will&lt;/strong&gt; have to buy PhilCon memberships. Please let me know if that, or any other aspect of these arrangements, provides an unacceptable financial burden to you. I, and others, are willing to help put up some money for active Lojbanists who want to come.
+&lt;/p&gt;
+&lt;p&gt;
+We don't know how big the room is going to be yet, but I've told them we expect about 10 people.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="17" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2005-09-05 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+&lt;strong&gt;Complete site overhaul!&lt;/strong&gt; Most of the lojban.org content has been moved from a set of static HTML pages to a &lt;a href="http://www.tikiwiki.org/"&gt;TikiWiki&lt;/a&gt; content management system. The number of changes caused by this are too long to list. In addition, &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=LLG+2004+Annual+Meeting+Minutes"&gt;the LLG 2004 Annual Meeting Minutes&lt;/a&gt; have been posted.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="16" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2004-05-02 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+A variety of minor bug fixes were done on the site, as well as some more major items. The front page was returned to CSS, XHTML and Bobby Level 3 compliance. The problem with clicking on one of the maps causing the maps to stop functioning was fixed. A couple of one-sheet brochures were added to &lt;a href="http://www.lojban.org/publications/brochures.html"&gt;the brochures page&lt;/a&gt;. The 25 November 2002 Board Meeting minutes were added. The 2003 annual meeting minutes were added.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="15" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2003-09-10 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+What is Lojban? is now available for purchase! The lojban.org site is now available, at least partially, in a variety of different languages. The vast majority of the site has been marked up in a way to make easy translation possible, but not all of the actual translation has been done. If you want to help, please contact the webmaster. Also, there is now a web-based IRC client available on the Forums page. The French and Spanish Lojban lists are now available. A Lojbanic translation program has been installed.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="14" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2003-05-11 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+Some bylaw changes from 1992 were incorporated. Split off of Old Projects into a seperate page, many changes (mostly minor) to the projects and committees pages. Markup changes all over the place.
+&lt;/p&gt;
+&lt;p&gt;
+The full changes list can be found at the Aegis change page for &lt;a href="http://www.lojban.org/cgi-bin/aegis.cgi?file@chan_menu+project@lojban-web+change@144"&gt;change number 144&lt;/a&gt;.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="13" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2003-04-07 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+This is the first site update in a long time, and as such it's a big one. The site now has &lt;a href="http://www.bestpractical.com/rt/"&gt;Request Tracker&lt;/a&gt; set up, and that is being used to manage necessary changes. The Level 0 book was added to the main site, a Helping Lojban page, a Help page, and a Feedback page were all added, and jbovlaste and Request Tracker were both linked in.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="12" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-12-30 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+An IRC logging system has been set up. See &lt;a href="http://www.lojban.org/resources/forums.html"&gt;the Lojbanic Forums page&lt;/a&gt;. Also, many pages have been edited to point to wiki.lojban.org as the official wiki site, which will continue to be the right place even if someone else takes it over.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="11" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-11-28 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+The new &lt;a href="http://www.lojban.org/llg/baseline.html"&gt;Official Baseline Statement&lt;/a&gt;, from the LLG has been posted.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="10" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-11-14 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+Addition to the &lt;a href="http://www.lojban.org/llg/projects.html"&gt;Official Projects&lt;/a&gt; page, minor fixes and updates.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="9" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-10-24 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+A &lt;a href="http://www.lojban.org/resources/promotional.html"&gt;Promotional Materials&lt;/a&gt; page has been created. Also, I've made a &lt;a href="http://www.lojban.org/cgi-bin/twiki/view/Files/"&gt;Community Files Area&lt;/a&gt;, which is a TWiki (a web-based colloborative space).
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="8" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-10-21 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+&lt;a href="http://www.lojban.org/resources/faq.html"&gt;The Lojban FAQ&lt;/a&gt; has been updated and moved and revamped and such. .uisai Thanks go to &lt;a href="mailto:daltonG@digitalkingdom.org"&gt;Dalton Graham&lt;/a&gt; for doing most of the work.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="7" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-09-23 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+There has been a major revamp of the Resources section. It has a lot more information in it now.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="6" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-09-18 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+The old minutes of the LLG have been posted, thanks to &lt;a href="http://www.miranda.org/~jkominek/"&gt;Jay Kominek&lt;/a&gt;. He also html formatted the bylaws. See the &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=LLG%20Publications"&gt;LLG publications&lt;/a&gt; page.
+&lt;/p&gt;
+&lt;p&gt;
+The &lt;a href="http://www.lojban.org/llg/projects.html"&gt;Official LLG Projects&lt;/a&gt; page has been constructed. Please submit anything you are working on!
+&lt;/p&gt;
+&lt;p&gt;
+An &lt;a href="http://www.lojban.org/llg/committees.html"&gt;official LLG Committees&lt;/a&gt; page has also been added.
+&lt;/p&gt;
+&lt;p&gt;
+An interactive story has been added; see the &lt;a href="http://www.lojban.org/texts/original.html"&gt;original lojbanic texts&lt;/a&gt; page.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="5" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-08-09 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+As may be obvious, I just made some drastic changes to the layout of the site. Please let me (&lt;a href="mailto:webmaster@lojban.org"&gt;webmaster@lojban.org&lt;/a&gt;) know what you think!
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="4" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-07-23 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+LogFest, the annual gathering of lojbanists, is this coming weekend. Also, the 2002 Annual Meeting of the Members of the LLG will be held on Sunday, July 28th (during LogFest).
+&lt;/p&gt;
+&lt;p&gt;
+The 2002 Annual Meeting of the Members of the LLG will be held at 1030AM EDT on Sunday July 28, 2002 at lojbab's house, 2904 Beau Lane, Fairfax VA 22031 USA. There being insufficient notice as required, no bylaw changes can be considered.
+&lt;/p&gt;
+&lt;p&gt;
+LogFest mostly consists of a bunch of people hanging out at lojbab's house, talking in and about lojban. The annual meeting always occurs during LogFest.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="3" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-07-01 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+There was a major (several day) downtime of this site, due to bad RAM, which in turn caused file system corruption. The problem has been solved, and this machine now has a new, larger hard drive, as well as a completely new operating system (NetBSD 1.5.2).
+&lt;/p&gt;
+&lt;p&gt;
+In addition, since the last update this machine has gotten a much faster processor and been moved into a co-location facility with a connection to the internet that is close to 300Mb/s.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="2" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-05-02 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+Minor website updates have been made. In particular, the contents of the Learning Lojban sections have been slightly improved, and many relative links have been fixed.
+&lt;/p&gt;
+</field>
+    </object>
+    <object pk="1" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2002-04-18 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+Amazing news! The first draft of the Alice In Wonderland translation appears to be complete. The only things missing are a couple of the chapter titles and one stanza of a poem, as of this writing. Please go take a look in the Translations section!
+&lt;/p&gt;
+</field>
+    </object>
+</django-objects>

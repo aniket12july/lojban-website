@@ -1,0 +1,10 @@
+
+--------------------
+
+2008-04-17:
+
+* All news items from the current website have been imported into the initial_data fixture.
+
+    python lojban/manage.py syncdb
+
+--------------------
