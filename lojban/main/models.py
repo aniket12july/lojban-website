@@ -1,6 +1,10 @@
 
+import re
+
 from django.db import models
 from django.utils import dateformat
+
+friendly_sumti_regexp = re.compile(r'\$?([a-z]+)_\{*(\d)\}*\$?')
 
 class NewsItem(models.Model):
     title = models.CharField(max_length=50, blank=True)
@@ -26,16 +30,30 @@ class Gismu(models.Model):
     cvv_rafsi = models.CharField("CVV rafsi", max_length=4, blank=True)
     english_keyword = models.CharField("English keyword", max_length=20, blank=True)
     hint = models.CharField(max_length=21, blank=True)
-    place_structure = models.CharField("Place structure", max_length=91)
+    definition = models.TextField()
+    notes = models.TextField(blank=True)
+    official = models.BooleanField(default=True)
+
+    def _friendly_definition(self):
+        return friendly_sumti_regexp.sub(r'\1\2', self.definition)
+    _friendly_definition.short_description = "Definition"
+    friendly_definition = property(_friendly_definition)
+
+    def _friendly_notes(self):
+        return friendly_sumti_regexp.sub(r'\1\2', self.notes)
+    _friendly_notes.short_description = "Notes"
+    friendly_notes = property(_friendly_notes)
 
     class Meta:
+        verbose_name_plural = "gismu"
         ordering = ("name",)
 
     def __unicode__(self):
         return self.name
 
     class Admin:
-        pass
+        list_display = ("name", "cvc_rafsi", "ccv_rafsi", "cvv_rafsi", "english_keyword", "hint", "_friendly_definition")
+        search_fields = ("name", "cvc_rafsi", "ccv_rafsi", "cvv_rafsi", "english_keyword", "hint", "definition", "notes")
 
 class WordOfTheDay(models.Model):
     gismu = models.ForeignKey(Gismu)

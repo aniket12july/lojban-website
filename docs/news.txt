@@ -3,6 +3,24 @@
 
 2008-04-17:
 
+* The `place_structure` CharField for the Gismu model has changed to the `definition` TextField.
+
+    python lojban/manage.py dbshell
+        alter table main_gismu alter column place_structure type text;
+        alter table main_gismu rename column place_structure to definition;
+
+* A `notes` TextField and an `official` BooleanField have been added to the Gismu model.
+
+    python lojban/manage.py dbshell
+        alter table main_gismu add column notes text;
+        alter table main_gismu add column official boolean;
+        update main_gismu set official = true;
+        alter table main_gismu alter column official set not null;
+
+--------------------
+
+2008-04-17:
+
 * All news items from the current website have been imported into the initial_data fixture.
 
     python lojban/manage.py syncdb
