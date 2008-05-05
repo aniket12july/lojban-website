@@ -171,7 +171,18 @@ class WordOfTheDay(models.Model):
         date_hierarchy = "pub_date"
 
 
+class FirstTimeStory(models.Model):
+    text = models.CharField("Where the user heard about lojban", max_length=500)
+    pub_date = models.DateField("Date entered", auto_now_add=True)
+    referrer = models.CharField("HTTP Referrer at time of 'report'", max_length=500)
 
+    class Meta:
+        ordering = ("-pub_date",)
+
+    class Admin:
+        list_display   = ("text", "pub_date", "referrer")
+        search_fields  = ("text", "referrer")
+        date_hierarchy = "pub_date"
 
 
 

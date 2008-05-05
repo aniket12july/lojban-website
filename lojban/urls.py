@@ -8,7 +8,7 @@ urlpatterns = patterns('lojban.main.views',
     (r'^$', 'home'),
     (r'^search/$', 'search'),
     (r'^news/$', 'news'),
-
+    (r'^heard/$', 'heard'),
     (r'^admin/', include('django.contrib.admin.urls')),
 )
 

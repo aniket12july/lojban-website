@@ -1,6 +1,7 @@
 
 from django.template import RequestContext
 from django.shortcuts import render_to_response
+from django.http import HttpResponseRedirect
 
 from lojban.main.models import *
 
@@ -31,8 +32,9 @@ def search(request):
                 pass
     return render_to_response("search.html", {"matches": matches}, context_instance=RequestContext(request))
 
-
-
-
+def heard(request):
+    heard_story = FirstTimeStory(text=request.POST['heard'], referrer=request.POST['referrer'])
+    heard_story.save()
+    return HttpResponseRedirect("/")
 
 
