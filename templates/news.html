@@ -8,15 +8,12 @@
 {% endblock head %}
 
 {% block content %}
-    <div>
-        <h2>News</h2>
-        <p>
-            This should merely be an archive of the "latest news" section on the front page.
-        </p>
+    <div id="news">
+        <h2>News archive for {{selected_year}}</h2>
         {% if news_items %}
             <ol>
                 {% for item in news_items %}
-                    <li>
+                    <li id="news-item-{{item.id}}">
                         <h3>{{item}}</h3>
                         {{item.text|safe}}
                     </li>
@@ -25,3 +22,17 @@
         {% endif %}
     </div>
 {% endblock content %}
+
+{% block aux %}
+    <h2>Archive by year</h2>
+    <ul>
+        {% for year in years %}
+            {% ifequal selected_year year.year %}
+                <li><a class="current">{{year.year}}</a></li>
+            {% else %}
+                <li><a href="/news/{{year.year}}/">{{year.year}}</a></li>
+            {% endifequal %}
+        {% endfor %}
+    </ul>
+{% endblock aux %}
+

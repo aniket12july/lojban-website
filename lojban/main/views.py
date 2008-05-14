@@ -8,9 +8,18 @@ def home(request):
     news_items = NewsItem.objects.all()[:2]
     return render_to_response("home.html", {"news_items": news_items}, context_instance=RequestContext(request))
 
-def news(request):
-    news_items = NewsItem.objects.all()
-    return render_to_response("news.html", {"news_items": news_items}, context_instance=RequestContext(request))
+def news(request, year=None):
+    years = NewsItem.objects.dates("pub_date", "year", order="DESC")
+    years = list(years) # Workaround for Bug #6180
+    if year is None:
+        year = years[0].year
+    year = int(year)
+    news_items = NewsItem.objects.filter(pub_date__year=year)
+    return render_to_response("news.html", {
+        "news_items": news_items,
+        "selected_year": year,
+        "years": years,
+    }, context_instance=RequestContext(request))
 
 def search(request):
     keywords = request.GET.get("keywords", "").split()

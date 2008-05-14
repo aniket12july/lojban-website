@@ -11,14 +11,14 @@ class NewsItem(models.Model):
     pub_date = models.DateTimeField("Date published")
     text = models.TextField()
 
+    def get_absolute_url(self):
+        return "/news/%d/#news-item-%d" % (self.pub_date.year, self.id)
+
     class Meta:
         ordering = ("-pub_date",)
 
     def __unicode__(self):
-        if self.title:
-            return self.title
-        else:
-            return dateformat.format(self.pub_date, "l d F Y")
+        return self.title or dateformat.format(self.pub_date, "l d F Y")
 
     class Admin:
         list_filter = ("pub_date",)

@@ -4,12 +4,22 @@ from os.path import join, normpath
 from django.conf.urls.defaults import *
 from django.conf import settings
 
+from lojban.main.feeds import NewsFeed
+
+feeds = {
+    "news": NewsFeed,
+}
+
 urlpatterns = patterns('lojban.main.views',
     (r'^$', 'home'),
     (r'^search/$', 'search'),
-    (r'^news/$', 'news'),
+    (r'^news/((?P<year>.*)/)?$', 'news'),
 
     (r'^admin/', include('django.contrib.admin.urls')),
+)
+
+urlpatterns += patterns('',
+    (r'^feeds/(?P<url>.*).atom$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
 )
 
 urlpatterns += patterns('django.views.generic.simple',

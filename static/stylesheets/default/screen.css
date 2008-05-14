@@ -266,6 +266,34 @@ button.cancel.text {
 
 /* Feature-specific. */
 
+html body #content #news {
+}
+
+    html body #content #news ol {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        html body #content #news ol li {
+            margin: 0 1em;
+            padding: 0.5em;
+        }
+
+        html body #content #news ol li:target {
+                border: thin solid;
+                background: #cdc;
+        }
+
+            html body #content #news ol li > * {
+                margin-left: 1em;
+            }
+
+            html body #content #news ol li h3 {
+                margin: 0;
+            }
+
+    
 #word-of-the-day {
 }
 
