@@ -1,3 +1,8 @@
+--------------------
+
+2008-05-06:
+
+* A new model has been added for the "First Time Stories". The submit form works now, too, even though you have to turn off javascript. You can look at the stories in the django admin. Don't forget to run syncdb.
 
 --------------------
 

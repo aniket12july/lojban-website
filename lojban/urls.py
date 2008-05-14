@@ -14,6 +14,7 @@ urlpatterns = patterns('lojban.main.views',
     (r'^$', 'home'),
     (r'^search/$', 'search'),
     (r'^news/((?P<year>.*)/)?$', 'news'),
+    (r'^heard/$', 'heard'),
 
     (r'^admin/', include('django.contrib.admin.urls')),
 )
