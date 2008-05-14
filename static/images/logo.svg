@@ -1,29 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
-<svg version="1.1"
-    baseProfile="tiny"
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 0 300 200"
-    width="300"
-    height="200"
-    preserveAspectRatio="xMidYMid">
-
+    width="400"
+    height="120"
+>
     <defs>
-        <circle id="circle" r="60" stroke="#55c" stroke-width="10" fill="none" />
-        <circle id="inner-circle" r="55" fill="#ddf" />
-        <g id="arrow">
-            <rect fill="#e55" width="120" height="10" />
-            <path d="M 0,0 L -16,10 L 0,20 L -4,10 z" transform="translate(10,-10) scale(1.5)" fill="#e55" />
+        <circle id="circle" r="29" fill="none" stroke="#646484" stroke-width="5"/>
+        <circle id="inner-circle" r="27" fill="#d0d5e2"/>
+        <g id="arrow" fill="#7492ba">
+            <rect width="60" height="5"/>
+            <path d="M 5,-5.5 L -8,2.5 5,10.5 2,2.5"/>
         </g>
     </defs>
 
-    <use xlink:href="#inner-circle" transform="translate(110, 100)" />
-    <use xlink:href="#inner-circle" transform="translate(190, 100)" />
-    <use xlink:href="#circle" transform="translate(110, 100)" />
-    <use xlink:href="#circle" transform="translate(190, 100)" />
-    <use xlink:href="#arrow" transform="translate(270, 105) rotate(180)"/>
-    <use xlink:href="#arrow" transform="translate(30, 95)"/>
-    <use xlink:href="#arrow" transform="translate(155, 20) rotate(90)"/>
-    <use xlink:href="#arrow" transform="translate(145, 180) rotate(-90)"/>
+    <rect fill="#e0e5f2" width="400" height="120"/>
+
+    <use xlink:href="#inner-circle" x="52" y="57"/>
+    <use xlink:href="#inner-circle" x="90" y="57"/>
+    <use xlink:href="#circle" x="52" y="57"/>
+    <use xlink:href="#circle" x="90" y="57"/>
+
+    <use xlink:href="#arrow" x="13" y="55"/>
+    <use xlink:href="#arrow" x="18" y="-74" transform="rotate(90)"/>
+    <use xlink:href="#arrow" x="-128" y="-60" transform="rotate(180)"/>
+    <use xlink:href="#arrow" x="-96" y="69" transform="rotate(270)"/>
+
+    <text font-family="MgOpen Modata" font-size="90px" x="144" y="88">
+        <tspan fill="#7492ba">loj</tspan><tspan fill="#646484">ban</tspan>
+    </text>
+    <text font-family="Lohit Tamil" font-size="20px" fill="#446" x="85" y="108">
+        <tspan dx="0 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2">
+            le logji bangu
+        </tspan>
+        <tspan x="220" dx="0 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2 -1.2">
+            a logical language
+        </tspan>
+    </text>
+
 </svg>
+

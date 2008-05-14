@@ -3,8 +3,9 @@ html {
     margin: 0;
     padding: 2em 5em 3em 5em;
     color: #013;
-    background: #e0f2e5;
+    background: #e0e5f2;
     font-family: "Trebuchet MS", sans-serif;
+    line-height: 1.15;
 }
 
     html body {
@@ -14,48 +15,36 @@ html {
 
         html body h1 {
             font-size: 200%;
-            margin: 0 0 0.5em 0;
+            margin: 0;
             min-height: 50px;
         }
-
-        /* Logo on the right-hand side. */
-        html body h1 {
-            padding: 20px 0 0 0;
-            background: url(/images/logo.png) no-repeat top right;
-        }
-        /* Logo on the right-hand side. */
-
-        /* Logo on the left-hand side. */
-        html body h1 {
-            padding: 20px 0 0 120px;
-            background: url(/images/logo.png) no-repeat top left;
-        }
-        /* Logo on the left-hand side. */
 
             html body h1 a {
                 text-decoration: none;
                 color: inherit !important;
             }
 
+                html body h1 a img {
+                    border: 0;
+                }
+
         html body #navigation {
-            font-size: 110%;
         }
 
             html body #navigation ul {
+                font-size: 110%;
                 display: table;
                 border-collapse: collapse;
                 margin: 0;
                 padding: 0;
                 width: 100%;
-                font-weight: bold;
-                border: medium solid #e9ecef;
             }
 
                 html body #navigation ul li {
                     display: table-cell;
                     margin: 0;
                     padding: 0;
-                    border: medium solid #e9ecef;
+                    border: medium solid #e0e5f2;
                     width: 25%;
                 }
 
@@ -65,12 +54,23 @@ html {
                         padding: 0.5em 0.75em;
                         text-decoration: none;
                         color: white;
-                        background: #577;
+                        background: #646484;
+                    }
+
+                    html body #navigation ul li:first-child a {
+                        \-moz-border-radius-topleft: 1em;
+                        \-moz-border-radius-bottomleft: 1em;
+                        padding-left: 1em;
+                    }
+
+                    html body #navigation ul li:last-child a {
+                        \-moz-border-radius-topright: 1em;
+                        \-moz-border-radius-bottomright: 1em;
                     }
 
                     html body #navigation ul li a.current {
                         color: white;
-                        background: #58a;
+                        background: #7492ba;
                     }
 
                     html body #navigation ul li a:link:hover,
@@ -78,14 +78,14 @@ html {
                     html body #navigation ul li a:link:focus,
                     html body #navigation ul li a:visited:focus {
                         color: white;
-                        background-color: #58a;
+                        background-color: #7492ba;
                         text-decoration: underline;
                     }
 
             html body #navigation #search {
                 position: absolute;
                 margin: -5.5em 0 0 0;
-                right: 5em;
+                right: 6em;
             }
 
         html body #content {
@@ -159,7 +159,7 @@ html {
             position: relative;
             top: 3em;
             clear: both;
-            border-top: thick solid #577;
+            border-top: thick solid #646484;
             padding: 0.5em 0;
             text-align: right;
         }
@@ -185,15 +185,17 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    color: #044;
+h6,
+strong {
+    color: #335;
 }
 
 h2 {
-    border-color: transparent transparent #577 #577;
+    border-color: transparent transparent #646484 #646484;
     border-width: 0.25em;
     border-style: solid;
     padding: 0 0.25em;
+    \-moz-border-radius-bottomleft: 0.5em;
 }
 
 [lang=jbo] {
@@ -282,7 +284,7 @@ html body #content #news {
 
         html body #content #news ol li:target {
                 border: thin solid;
-                background: #cdc;
+                background: #ccd;
         }
 
             html body #content #news ol li > * {
@@ -311,7 +313,7 @@ html body #content #news {
     }
 
     #word-of-the-day img.illustration {
-        border: thin solid #577;
+        border: thin solid #646484;
         display: block;
         margin: 1em auto;
     }
@@ -353,7 +355,7 @@ table {
 
 th {
     color: white;
-    background: #577;
+    background: #646484;
     text-align: left;
     vertical-align: top;
 }
@@ -365,7 +367,7 @@ th:after {
 th,
 td {
     padding: 0.25em 0.5em;
-    border: thin solid #577;
+    border: thin solid #646484;
 }
 
 /* Temporary until the FOUC is solved. */
