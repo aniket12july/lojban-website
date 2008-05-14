@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+    <ShortName>Lojban</ShortName>
+    <Description>Search Lojban.com</Description>
+    <Url type="text/html" template="{{absolute_uri}}search/?keywords={searchTerms}"/>
+    <Url type="application/x-suggestions+json" template="{{absolute_uri}}search/suggestions.json?keywords={searchTerms}"/>
+    <Image width="16" height="16" type="image/png">{{absolute_uri}}images/icon-small.png</Image>
+    <Image width="64" height="64" type="image/png">{{absolute_uri}}images/icon-large.png</Image>
+    <Tags>lojban conlang artificial logical language</Tags>
+</OpenSearchDescription>
+

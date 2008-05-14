@@ -13,6 +13,8 @@ feeds = {
 urlpatterns = patterns('lojban.main.views',
     (r'^$', 'home'),
     (r'^search/$', 'search'),
+    (r'^search/opensearch.xml$', 'opensearch'),
+    (r'^search/suggestions.json$', 'opensearch_suggestions'),
     (r'^news/((?P<year>.*)/)?$', 'news'),
     (r'^heard/$', 'heard'),
 

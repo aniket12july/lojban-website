@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="140"
+    height="140"
+>
+    <defs>
+        <circle id="circle" r="29" fill="none" stroke="#646484" stroke-width="5"/>
+        <circle id="inner-circle" r="27" fill="#d0d5e2"/>
+        <g id="arrow" fill="#7492ba">
+            <rect width="60" height="5"/>
+            <path d="M 5,-5.5 L -8,2.5 5,10.5 2,2.5"/>
+        </g>
+    </defs>
+
+    <rect fill="#e0e5f2" width="140" height="140"/>
+
+    <use xlink:href="#inner-circle" x="52" y="69"/>
+    <use xlink:href="#inner-circle" x="90" y="69"/>
+    <use xlink:href="#circle" x="52" y="69"/>
+    <use xlink:href="#circle" x="90" y="69"/>
+
+    <use xlink:href="#arrow" x="13" y="67"/>
+    <use xlink:href="#arrow" x="30" y="-74" transform="rotate(90)"/>
+    <use xlink:href="#arrow" x="-128" y="-72" transform="rotate(180)"/>
+    <use xlink:href="#arrow" x="-108" y="69" transform="rotate(270)"/>
+
+</svg>
+

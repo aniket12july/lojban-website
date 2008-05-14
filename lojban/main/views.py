@@ -1,7 +1,8 @@
 
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
+from django.utils import simplejson
 
 from lojban.main.models import *
 
@@ -22,6 +23,11 @@ def news(request, year=None):
         "years": years,
     }, context_instance=RequestContext(request))
 
+def heard(request):
+    heard_story = FirstTimeStory(text=request.POST['heard'], referrer=request.POST['referrer'])
+    heard_story.save()
+    return HttpResponseRedirect("/")
+
 def search(request):
     keywords = request.GET.get("keywords", "").split()
     matches = []
@@ -41,9 +47,20 @@ def search(request):
                 pass
     return render_to_response("search.html", {"matches": matches}, context_instance=RequestContext(request))
 
-def heard(request):
-    heard_story = FirstTimeStory(text=request.POST['heard'], referrer=request.POST['referrer'])
-    heard_story.save()
-    return HttpResponseRedirect("/")
+def opensearch(request):
+    return render_to_response("opensearch.xml", {
+        "absolute_uri": request.build_absolute_uri("/"),
+    }, context_instance=RequestContext(request), mimetype="application/opensearchdescription+xml ")
 
+def opensearch_suggestions(request):
+    keywords = request.GET.get("keywords", "")
+    response = [
+        keywords
+    ]
+    matches = []
+    for Valsi in Gismu, Cmavo, Lujvo, Fuhivla:
+        for match in Valsi.objects.filter(name__istartswith=keywords):
+            matches.append(match.name)
+    response.append(matches)
+    return HttpResponse(simplejson.dumps(response), mimetype="application/x-suggestions+json")
 
