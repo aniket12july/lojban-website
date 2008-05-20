@@ -78,7 +78,7 @@ A 43-year-old linguist from Munich, Mr. Pilch speaks Chinese, Japanese and an ar
         <field type="CharField" name="title"></field>
         <field type="DateTimeField" name="pub_date">2006-08-28 00:00:00</field>
         <field type="TextField" name="text">&lt;p&gt;
-The next Lojban Fest for 2006 will be held at &lt;a href="http://www.philcon.org/"&gt;Philcon in Philadelphia, November 17 through 19, 2006. Check out the page &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=jbonunsla+2006"&gt;jbonunsla 2006&lt;/a&gt; for the schedule and attendees so far, as well as registration details. Newcomers are especially welcome to join us! Keep checking the schedule as we continue to work with &lt;a href="http://www.kli.org/"&gt;the Klingon Language Institute&lt;/a&gt; about the possibility of collaborative content between Lojban and Klingon at Philcon!
+The next Lojban Fest for 2006 will be held at &lt;a href="http://www.philcon.org/"&gt;Philcon&lt;/a&gt; in Philadelphia, November 17 through 19, 2006. Check out the page &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=jbonunsla+2006"&gt;jbonunsla 2006&lt;/a&gt; for the schedule and attendees so far, as well as registration details. Newcomers are especially welcome to join us! Keep checking the schedule as we continue to work with &lt;a href="http://www.kli.org/"&gt;the Klingon Language Institute&lt;/a&gt; about the possibility of collaborative content between Lojban and Klingon at Philcon!
 &lt;/p&gt;
 </field>
     </object>
