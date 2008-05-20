@@ -361,6 +361,18 @@ html body #content #news {
         font-style: italic;
     }
 
+html body #content #irc {
+}
+
+    html body #content #irc table {
+        width: auto;
+        margin: 1em auto;
+    }
+
+html body #aux #irc-activity p {
+    margin: 1em;
+}
+
 #weblogs {
 }
 
@@ -393,6 +405,12 @@ html body #content #news {
         text-decoration: underline;
     }
 
+.irc-channel,
+.hostname,
+.port {
+    font-family: monospace;
+}
+
 table {
     margin: 1em;
     width: 100%;
@@ -414,6 +432,10 @@ th,
 td {
     padding: 0.25em 0.5em;
     border: thin solid #646484;
+}
+
+tr.alternate td {
+    background: #d5d5d5;
 }
 
 /* Temporary until the FOUC is solved. */

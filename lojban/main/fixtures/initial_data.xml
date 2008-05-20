@@ -1,4 +1,11 @@
 <django-objects version="1.0">
+    <object pk="1" model="main.ircchannel">
+        <field type="CharField" name="name">#lojban</field>
+        <field type="CharField" name="server">irc.lojban.com</field>
+        <field type="IntegerField" name="port">6667</field>
+        <field type="DateTimeField" name="last_activity">2008-03-20 00:00:00</field>
+        <field type="IntegerField" name="headcount">0</field>
+    </object>
     <object pk="1" model="main.weblog">
         <field type="CharField" name="title">le jbopre pe lj</field>
         <field type="CharField" name="feed_uri">http://community.livejournal.com/lojban/data/atom</field>

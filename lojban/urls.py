@@ -17,6 +17,7 @@ urlpatterns = patterns('lojban.main.views',
     (r'^search/suggestions.json$', 'opensearch_suggestions'),
     (r'^news/((?P<year>.*)/)?$', 'news'),
     (r'^community/$', 'community'),
+    (r'^community/irc/$', 'irc'),
     (r'^heard/$', 'heard'),
 
     (r'^admin/', include('django.contrib.admin.urls')),

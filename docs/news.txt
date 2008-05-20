@@ -1,3 +1,20 @@
+
+--------------------
+
+2008-05-20:
+
+* A new model and a customised action have been added for IRC integration.  The customised action starts an IRC bot that sits in #lojban silently keeping track of how many people are in the channel and how long it has been since anybody said anything.
+
+You do not need to run this bot unless you are making changes to it.  If this is the case, please change the configuration to use a different channel and nick beforehand to avoid annoying people in #lojban during development.
+
+    python lojban/manage.py syncdb
+    python lojban/manage.py irc-bot start # Starts the bot.
+    python lojban/manage.py irc-bot stop # Stops the bot.
+
+Please note that it requires a ./run/ directory within the website directory it can write to for the purpose of process management.
+
+This functionality requires irclib, available at http://python-irclib.sourceforge.net
+
 --------------------
 
 2008-05-20:

@@ -1,0 +1,42 @@
+{% comment %}
+
+If there's a problem with the bot or for some reason #lojban is deserted or really quiet, it's probably not such a good idea to advertise that fact.  So if there are fewer than three people in the channel, we won't mention it at all.  If there has been no activity logged in over six hours, we'll just list the number of people in the channel.
+
+{% endcomment %}
+
+{% if irc %}
+    {% load comparisons %}
+    {% if irc.headcount|gte:3 %}
+        {% load humanize %}
+        <div id="irc-activity">
+            <h2>IRC activity</h2>
+            <p>
+                There are <strong>{{irc.headcount|apnumber}} people</strong> logged into <span class="irc-channel">#lojban</span> at the moment.
+                {% if not irc.days_since_activity %}
+                    {% if irc.hours_since_activity|lte:6 %}
+                        {% if irc.current_activity %}
+                            Somebody is talking <strong>right now</strong>.
+                        {% else %}
+                            {% if irc.hours_since_activity %}
+                                Somebody last spoke <strong>
+                                {% if irc.hours_since_activity|gt:1 %}
+                                    {{irc.hours_since_activity}} hours
+                                {% else %}
+                                    an hour
+                                {% endif %}
+                                {% if irc.minutes_since_activity %}
+                                    and {{irc.minutes_since_activity}} minute{{irc.minutes_since_activity|pluralize}}
+                                {% endif %}
+                                ago</strong>.
+                            {% else %}
+                                Somebody last spoke <strong>{{irc.minutes_since_activity}} minute{{irc.minutes_since_activity|pluralize}} ago</strong>.
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                    <a href="/community/irc/">Hop in and say <span lang="jbo">coi</span>!</a>
+                {% endif %}
+            </p>
+        </div>
+    {% endif %}
+{% endif %}
+

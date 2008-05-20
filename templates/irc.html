@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% load comparisons %}
+
+{% block title %}Introduction to Lojbanic IRC{% endblock title %}
+
+{% block breadcrumb %}
+    <h2>You are here:</h2>
+    <p>
+        <a href="/" rel="home">Home</a> &#x2794; <a href="/community/" class="up">Community</a> &#x2794; <a class="current">Introduction to IRC</a>
+    </p>
+{% endblock breadcrumb %}
+
+{% block content %}
+    <div id="irc">
+        <h2>Introduction to Lojbanic IRC</h2>
+        <p>
+            There are usually a couple dozen people in <span class="irc-channel">#lojban</span> at any given time, but they often aren't engaged in active discussion. Say <span lang="jbo">coi</span>, and wait. Get a soda. Practice your vocabulary. But be patient. Dedicated IRCers don't sit in front of the computer 24/7 waiting to respond within 10 seconds of everything said. Think of it as sort of a fast moving message board. 
+        </p>
+        <p>
+            If you have used IRC before, then you'll probably have an IRC client already installed.  Connect to <strong class="hostname">irc.lojban.org</strong>, port <strong class="port">6667</strong> and join the channel <strong class="irc-channel">#lojban</strong>.
+        </p>
+        <p>
+            If, on the other hand, you are new to IRC, you can <a href="http://embed.mibbit.com/?server=irc.freenode.net&amp;channel=%23lojban&amp;noServerTab=false">access the channel through your web browser</a>.  You'll probably find <a href="http://www.irchelp.org/irchelp/new2irc.html">this IRC tutorial</a> useful as well.
+        </p>
+
+        <h2>Cheat Sheet</h2>
+        <p>
+            Even though a great deal of conversation happens in English in <span class="irc-channel">#lojban</span>, you'll still see plenty of Lojban.  Here's a quick summary of the most common phrases you are likely to see.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="column">Lojban</th>
+                    <th scope="column">English</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="{% cycle "" "alternate" as zebra %}">
+                    <td>coi</td>
+                    <td>hi.</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>coi ro do</td>
+                    <td>hi everyone.</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>co'o</td>
+                    <td>bye.</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>co'o rodo</td>
+                    <td>bye everyone.</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>do mo</td>
+                    <td>what's up?</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>go'i</td>
+                    <td>yes (repeat what you just said)</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>na go'i</td>
+                    <td>no</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>je'e</td>
+                    <td>roger that</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>fi'i</td>
+                    <td>make yourself at home</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>mi jimpe</td>
+                    <td>I understand</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>mi na jimpe</td>
+                    <td>I don't understand</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>mi'e .maik.</td>
+                    <td>My name is Michael</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>ki'a</td>
+                    <td>what?!</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>ki'e</td>
+                    <td>thanks</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.u'u</td>
+                    <td>sorry</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.u'u sai</td>
+                    <td>very sorry</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.u'u cai do cevni fi mi</td>
+                    <td>very very sorry</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.e'u</td>
+                    <td>"I suggest.." or "please..."</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>xamgu</td>
+                    <td>good</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>po'u</td>
+                    <td>which is...</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>ko gletu lo xasli</td>
+                    <td>I am now a true Lojbanist (rite of passage)</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.ie</td>
+                    <td>agree</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.ie nai</td>
+                    <td>disagree</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.ui</td>
+                    <td>:-) (happy)</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.ui nai</td>
+                    <td>:-(</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.u'i</td>
+                    <td>:-D lol</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.u'i nai</td>
+                    <td>:-(!! Not funny.</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>zo'o</td>
+                    <td>:-) (only joking)</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>zo'o nai</td>
+                    <td>:-[ (serious!)</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.ua</td>
+                    <td>oh! (discovery)</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>.ua nai</td>
+                    <td>I'm confused</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>mi na jundi</td>
+                    <td>brb / afk</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>le mi zdani cu fagri</td>
+                    <td>I love IRC so much that nothing else matters.</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>mi co'u jundi</td>
+                    <td>back again</td>
+                </tr>
+                <tr class="{% cycle zebra %}">
+                    <td>mi prami do</td>
+                    <td>I love you</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
+
+{% block aux %}
+    {% include "irc-activity.html" %}
+{% endblock aux %}

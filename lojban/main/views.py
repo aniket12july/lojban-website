@@ -35,9 +35,25 @@ def community(request):
     weblog = Weblog.objects.get()
     weblog_entries = WeblogEntry.objects.all()[:5]
 
+    try:
+        irc = IRCChannel.objects.get()
+    except IRCChannel.DoesNotExist:
+        irc = None
+
     return render_to_response("community.html", {
         "weblog": weblog,
         "weblog_entries": weblog_entries,
+        "irc": irc,
+    }, context_instance=RequestContext(request))
+
+def irc(request):
+    try:
+        irc = IRCChannel.objects.get()
+    except IRCChannel.DoesNotExist:
+        irc = None
+
+    return render_to_response("irc.html", {
+        "irc": irc,
     }, context_instance=RequestContext(request))
 
 def search(request):

@@ -1,5 +1,6 @@
 
 import re
+from datetime import datetime
 
 from django.db import models
 from django.utils import dateformat
@@ -54,6 +55,54 @@ class WeblogEntry(models.Model):
         list_display = ("title", "weblog", "pub_date")
         list_filter = ("pub_date",)
         date_hierarchy = "pub_date"
+
+class IRCChannel(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    server = models.CharField(max_length=100)
+    port = models.IntegerField()
+    last_activity = models.DateTimeField("Last activity")
+    headcount = models.IntegerField()
+
+    @property
+    def last_activity_parsed(self):
+        delta = datetime.now() - self.last_activity
+        minutes = delta.seconds / 60
+        hours = minutes / 60
+        minutes = minutes % 60
+        return delta.days, hours, minutes
+
+    def _days_since_activity(self):
+        return self.last_activity_parsed[0]
+    _days_since_activity.short_description = "Days since activity"
+    days_since_activity = property(_days_since_activity)
+
+    def _hours_since_activity(self):
+        return self.last_activity_parsed[1]
+    _hours_since_activity.short_description = "Hours since activity"
+    hours_since_activity = property(_hours_since_activity)
+
+    def _minutes_since_activity(self):
+        return self.last_activity_parsed[2] / 5 * 5 # Round down to nearest five minutes
+    _minutes_since_activity.short_description = "Minutes since activity"
+    minutes_since_activity = property(_minutes_since_activity)
+
+    def _current_activity(self):
+        try:
+            days, hours, minutes = self.last_activity_parsed
+            if days == 0 and hours == 0 and minutes == 0:
+                return True
+            else:
+                return False
+        except:
+            return False
+    _current_activity.short_description = "Current activity"
+    current_activity = property(_current_activity)
+
+    def __unicode__(self):
+        return self.name
+
+    class Admin:
+        list_display = ("name", "server", "port", "headcount", "last_activity")
 
 class Gismu(models.Model):
     name = models.CharField(max_length=5)
