@@ -10,6 +10,8 @@ In addition, a customised action has been added to fetch the entries in all regi
 
     python lojban/manage.py fetch-feeds
 
+This functionality requires the Universal Feed Parser, available at http://www.feedparser.org
+
 --------------------
 
 2008-05-06:
