@@ -8,6 +8,8 @@
 You do not need to run this bot unless you are making changes to it.  If this is the case, please change the configuration to use a different channel and nick beforehand to avoid annoying people in #lojban during development.
 
     python lojban/manage.py syncdb
+    mkdir run
+
     python lojban/manage.py irc-bot start # Starts the bot.
     python lojban/manage.py irc-bot stop # Stops the bot.
 
