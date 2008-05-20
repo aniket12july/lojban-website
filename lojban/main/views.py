@@ -28,6 +28,18 @@ def heard(request):
     heard_story.save()
     return HttpResponseRedirect("/")
 
+def community(request):
+
+    # We only handle one weblog at the moment because we pass aggregation off onto LiveJournal.
+    # Ideally, this should be changed so that we handle aggregation, in order to include non-LiveJournal weblogs.
+    weblog = Weblog.objects.get()
+    weblog_entries = WeblogEntry.objects.all()[:5]
+
+    return render_to_response("community.html", {
+        "weblog": weblog,
+        "weblog_entries": weblog_entries,
+    }, context_instance=RequestContext(request))
+
 def search(request):
     keywords = request.GET.get("keywords", "").split()
     matches = []

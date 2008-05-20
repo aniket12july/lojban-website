@@ -24,6 +24,37 @@ class NewsItem(models.Model):
         list_filter = ("pub_date",)
         date_hierarchy = "pub_date"
 
+class Weblog(models.Model):
+    title = models.CharField(max_length=200)
+    feed_uri = models.URLField(verify_exists=True)
+    link = models.URLField(verify_exists=True)
+
+    def __unicode__(self):
+        return self.title
+
+    class Admin:
+        list_display = ("title", "link")
+        search_fields = ("title",)
+
+class WeblogEntry(models.Model):
+    id = models.CharField(max_length=200, primary_key=True)
+    weblog = models.ForeignKey(Weblog)
+    title = models.CharField(max_length=200)
+    link = models.URLField(verify_exists=True)
+    pub_date = models.DateTimeField("Date published")
+
+    class Meta:
+        verbose_name_plural = "Weblog entries"
+        ordering = ("-pub_date",)
+
+    def __unicode__(self):
+        return self.title
+
+    class Admin:
+        list_display = ("title", "weblog", "pub_date")
+        list_filter = ("pub_date",)
+        date_hierarchy = "pub_date"
+
 class Gismu(models.Model):
     name = models.CharField(max_length=5)
     cvc_rafsi = models.CharField("CVC rafsi", max_length=3, blank=True)
@@ -150,7 +181,6 @@ class Fuhivla(models.Model):
         list_display = ("name", "_friendly_definition")
         search_fields = ("name", "definition", "notes")
 
-
 class WordOfTheDay(models.Model):
     gismu = models.ForeignKey(Gismu)
     pub_date = models.DateField("Date published", auto_now_add=True)
@@ -169,7 +199,6 @@ class WordOfTheDay(models.Model):
         list_display = ("gismu", "pub_date")
         search_fields = ["example_en"]
         date_hierarchy = "pub_date"
-
 
 class FirstTimeStory(models.Model):
     text = models.CharField("Where the user heard about lojban", max_length=500)

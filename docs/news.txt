@@ -1,5 +1,17 @@
 --------------------
 
+2008-05-20:
+
+* New models have been added for weblog aggregation.  At the moment, the assumption is that only one weblog will be present in the database; the Lojban LiveJournal community.  This has been added to the initial_data fixture, so syncing the database will add the tables and necessary data.
+
+    python lojban/manage.py syncdb
+
+In addition, a customised action has been added to fetch the entries in all registered weblogs.  This is designed to run as a cron job, but you'll probably want to execute it by hand for development purposes.
+
+    python lojban/manage.py fetch-feeds
+
+--------------------
+
 2008-05-06:
 
 * A new model has been added for the "First Time Stories". The submit form works now, too, even though you have to turn off javascript. You can look at the stories in the django admin. Don't forget to run syncdb.

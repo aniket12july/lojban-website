@@ -1,4 +1,9 @@
 <django-objects version="1.0">
+    <object pk="1" model="main.weblog">
+        <field type="CharField" name="title">le jbopre pe lj</field>
+        <field type="CharField" name="feed_uri">http://community.livejournal.com/lojban/data/atom</field>
+        <field type="CharField" name="link">http://community.livejournal.com/lojban/</field>
+    </object>
     <object pk="30" model="main.newsitem">
         <field type="CharField" name="title"></field>
         <field type="DateTimeField" name="pub_date">2008-03-13 00:00:00</field>

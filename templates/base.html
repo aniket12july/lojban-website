@@ -28,6 +28,10 @@
                         <button type="submit" class="search">Search <img src="/images/search.png" alt=""></button>
                     </div>
                 </form>
+                <div id="breadcrumb">
+                    {% block breadcrumb %}
+                    {% endblock breadcrumb %}
+                </div>
             {% endblock navigation %}
         </div>
         <div id="content">

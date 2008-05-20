@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.admin',
+    'django.contrib.humanize',
     'lojban.main',
 )
 

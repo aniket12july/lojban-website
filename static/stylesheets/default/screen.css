@@ -88,6 +88,20 @@ html {
                 right: 6em;
             }
 
+            html body #navigation #breadcrumb {
+                margin: 0.25em 0 0 1em;
+            }
+
+                html body #navigation #breadcrumb h2 {
+                    display: inline;
+                    font-size: 100%;
+                    border: 0;
+                }
+
+                html body #navigation #breadcrumb p {
+                    display: inline;
+                }
+
         html body #content {
             margin: 0;
             padding: 0;
@@ -345,6 +359,38 @@ html body #content #news {
     #content #word-of-the-day #illustration p.caption {
         text-align: center;
         font-style: italic;
+    }
+
+#weblogs {
+}
+
+    #weblogs ul {
+        margin: 0 0 0 1em;
+        padding: 0;
+    }
+
+        #weblogs ul li {
+            margin: 1em;
+        }
+
+            #weblogs ul li .date {
+                font-size: 80%;
+                white-space: nowrap;
+            }
+
+    #weblogs p {
+        margin: 0 1em 0 0;
+        font-size: 90%;
+        text-align: right;
+    }
+
+    #weblogs a {
+        text-decoration: none;
+    }
+
+    #weblogs a:hover,
+    #weblogs a:focus {
+        text-decoration: underline;
     }
 
 table {
