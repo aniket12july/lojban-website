@@ -1,4 +1,6 @@
 
+from httplib2 import Http
+
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
@@ -73,7 +75,20 @@ def search(request):
                 matches.append((valsi, valsi_type))
             except Valsi.DoesNotExist:
                 pass
-    return render_to_response("search.html", {"matches": matches}, context_instance=RequestContext(request))
+
+    http = Http()
+    headers = {
+        "Referer": request.build_absolute_uri("/"),
+    }
+    response, content = http.request("http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=site:lojban.com%20" + "%20".join(keywords))
+    google_results = None
+    if response.status == 200:
+        google_results = simplejson.loads(content)["responseData"]["results"]
+
+    return render_to_response("search.html", {
+        "matches": matches,
+        "google_results": google_results,
+    }, context_instance=RequestContext(request))
 
 def opensearch(request):
     return render_to_response("opensearch.xml", {
