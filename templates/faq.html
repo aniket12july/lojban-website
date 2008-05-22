@@ -3,10 +3,24 @@
 {% block title %}Frequently asked questions about Lojban{% endblock title %}
 
 {% block content %}
-    <div id="introduction">
+    <div id="faq">
         <h2>Frequently Asked Questions</h2>
-        <p>
-            This is just a regular FAQ, mostly comprised of material from <a href="http://www.lojban.org/tiki/tiki-index.php?page=Frequently+Asked+Questions+About+Lojban&bl">the existing FAQ</a>.
-        </p>
+        {% for faq in faqs %}
+            <div id="{{faq.slug}}">
+                <h3>{{faq.question}}</h3>
+                {{faq.answer|safe}}
+            </div>
+        {% endfor %}
     </div>
 {% endblock content %}
+
+{% block aux %}
+    <div id="faq-index">
+        <h2>FAQ Index</h2>
+        <ul>
+            {% for faq in faqs %}
+                <li><a href="#{{faq.slug}}">{{faq}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock aux %}

@@ -3,6 +3,14 @@
 
 2008-05-22:
 
+* A new model and initial data has been added for the FAQ.  The questions I have included are aimed at the absolute beginner and don't go into much depth at all.  For now, I've linked to the old FAQ at the end, but the better solution will be to fill out the proposed "About Lojban" section with more background information.
+
+    python lojban/manage.py syncdb
+
+--------------------
+
+2008-05-22:
+
 * Google Search now supplies content searching within the site.  At the moment, Google has only got stale content indexed, so we should produce a sitemap in the near future.
 
 This funtionality requires httplib2, available at http://code.google.com/p/httplib2/

@@ -25,6 +25,10 @@ def news(request, year=None):
         "years": years,
     }, context_instance=RequestContext(request))
 
+def faq(request):
+    faqs = FAQ.objects.all()
+    return render_to_response("faq.html", {"faqs": faqs}, context_instance=RequestContext(request))
+
 def heard(request):
     heard_story = FirstTimeStory(text=request.POST['heard'], referrer=request.POST['referrer'])
     heard_story.save()

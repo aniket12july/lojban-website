@@ -25,6 +25,22 @@ class NewsItem(models.Model):
         list_filter = ("pub_date",)
         date_hierarchy = "pub_date"
 
+class FAQ(models.Model):
+    question = models.CharField(max_length=250)
+    short_title = models.CharField("Short title", max_length=150, blank=True)
+    answer = models.TextField()
+    position = models.IntegerField()
+    slug = models.SlugField(prepopulate_from=("short_title",))
+
+    class Meta:
+        ordering = ("position",)
+
+    def __unicode__(self):
+        return self.short_title or self.question
+
+    class Admin:
+        pass
+
 class Weblog(models.Model):
     title = models.CharField(max_length=200)
     feed_uri = models.URLField(verify_exists=True)

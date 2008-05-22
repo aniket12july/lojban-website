@@ -1,4 +1,75 @@
 <django-objects version="1.0">
+    <object pk="1" model="main.faq">
+        <field type="CharField" name="question">Wait, a made-up language? That's a bit geeky isn't it?</field>
+        <field type="CharField" name="short_title">That's a bit geeky isn't it?</field>
+        <field type="TextField" name="answer">&lt;p&gt;
+    Yes it is!  Learning Lojban is not at all as practical as learning a natural language.  If the thought of learning a language for the fun of it doesn't appeal to you, then you aren't likely to find Lojban interesting.  If, on the other hand, it fills your head with ideas, then learning Lojban can prove to be a fun, intellectually stimulating hobby.
+&lt;/p&gt;
+</field>
+        <field type="IntegerField" name="position">1</field>
+        <field type="SlugField" name="slug">geeky</field>
+    </object>
+    <object pk="2" model="main.faq">
+        <field type="CharField" name="question">So who speaks Lojban then?</field>
+        <field type="CharField" name="short_title">Who speaks Lojban?</field>
+        <field type="TextField" name="answer">&lt;p&gt;
+    Geeks!  No, seriously, all kinds of people speak Lojban.  It was originally designed for linguistic experiments, but most Lojban speakers these days have absolutely no background in linguistics at all.  Some of them are [insert profession here], some are [insert profession here], and some are&amp;hellip;.  Lojban speakers are scattered &lt;a href="http://www.frappr.com/lojban"&gt;throughout the world&lt;/a&gt;.
+&lt;/p&gt;
+&lt;!-- We really need an alternative to Frappr.  It's buggy to the point of being broken. --&gt;
+</field>
+        <field type="IntegerField" name="position">2</field>
+        <field type="SlugField" name="slug">who-speaks-lojban</field>
+    </object>
+    <object pk="3" model="main.faq">
+        <field type="CharField" name="question">How hard is it?</field>
+        <field type="CharField" name="short_title"></field>
+        <field type="TextField" name="answer">&lt;p&gt;
+    It varies from person to person.  The grammar is based on predicate logic, which makes Lojban quite unlike natural languages.  Some people find this easier to deal with, some people find it more difficult.
+&lt;/p&gt;
+&lt;p&gt;
+    One &lt;em&gt;clear&lt;/em&gt; advantage Lojban has over natural languages is that it is very regular.  You don't have to remember all kinds of exceptions to rules.  You don't have to remember endless variations of words depending on gender, quantities or tense.  Everything is spelled phonetically.
+&lt;/p&gt;
+</field>
+        <field type="IntegerField" name="position">3</field>
+        <field type="SlugField" name="slug">how-hard-is-it</field>
+    </object>
+    <object pk="4" model="main.faq">
+        <field type="CharField" name="question">How do I get started?</field>
+        <field type="CharField" name="short_title"></field>
+        <field type="TextField" name="answer">&lt;p&gt;
+    There are books available to read online for free, or if you prefer to do your reading away from the computer, you can buy a physical copy.  Links to these resources and more are available in the &lt;a href="/learning/"&gt;Learning Lojban&lt;/a&gt; section of this site.
+&lt;/p&gt;
+</field>
+        <field type="IntegerField" name="position">4</field>
+        <field type="SlugField" name="slug">getting-started</field>
+    </object>
+    <object pk="5" model="main.faq">
+        <field type="CharField" name="question">Will you help me?</field>
+        <field type="CharField" name="short_title"></field>
+        <field type="TextField" name="answer">&lt;p&gt;
+    Lojban has a friendly &lt;a href="/community/"&gt;online community&lt;/a&gt; with plenty of people who are eager to help newcomers to the language.  You can subscribe to the beginners' mailing list, post to the forums, or hop onto IRC for a live chat if you get stuck and need a helping hand.
+&lt;/p&gt;
+</field>
+        <field type="IntegerField" name="position">5</field>
+        <field type="SlugField" name="slug">will-you-help-me</field>
+    </object>
+    <object pk="6" model="main.faq">
+        <field type="CharField" name="question">I have more questions!</field>
+        <field type="CharField" name="short_title">More questions</field>
+        <field type="TextField" name="answer">&lt;p&gt;
+    There is a more &lt;a href="http://www.lojban.org/tiki/tiki-index.php?page=Frequently+Asked+Questions+About+Lojban"&gt;in-depth FAQ&lt;/a&gt; available on the developer site.
+&lt;/p&gt;
+</field>
+        <field type="IntegerField" name="position">6</field>
+        <field type="SlugField" name="slug">more-questions</field>
+    </object>
+    <object pk="30" model="main.newsitem">
+        <field type="CharField" name="title"></field>
+        <field type="DateTimeField" name="pub_date">2008-03-13 00:00:00</field>
+        <field type="TextField" name="text">&lt;p&gt;
+la xris and la timos started a new project! Learn one new word every day by reading the blog at &lt;a href="http://valsi.blogspot.com" lang="jbo"&gt;ko facki fi lo tolslabu valsi&lt;/a&gt;. There is also &lt;a href="http://valsi.blogspot.com/feeds/posts/default"&gt;an atom feed&lt;/a&gt; available.
+&lt;/p&gt;</field>
+    </object>
     <object pk="1" model="main.ircchannel">
         <field type="CharField" name="name">#lojban</field>
         <field type="CharField" name="server">irc.lojban.com</field>
