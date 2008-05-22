@@ -1,6 +1,14 @@
 
 --------------------
 
+2008-05-22:
+
+* Google Search now supplies content searching within the site.  At the moment, Google has only got stale content indexed, so we should produce a sitemap in the near future.
+
+This funtionality requires httplib2, available at http://code.google.com/p/httplib2/
+
+--------------------
+
 2008-05-20:
 
 * A new model and a customised action have been added for IRC integration.  The customised action starts an IRC bot that sits in #lojban silently keeping track of how many people are in the channel and how long it has been since anybody said anything.
