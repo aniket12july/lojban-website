@@ -4,7 +4,7 @@ from os.path import join, normpath
 from datetime import datetime
 from functools import partial
 
-import irclib
+from ircbot import SingleServerIRCBot
 
 from django.core.management.base import BaseCommand
 from django.conf import settings
@@ -18,10 +18,6 @@ password = None
 pid_filename = normpath(join(settings.LOCAL_PATH, "run", "irc-bot.pid"))
 log_filename = normpath(join(settings.LOCAL_PATH, "run", "irc-bot.log"))
 working_dir = "/"
-
-irc = irclib.IRC()
-
-users = {}
 
 def start_daemon():
     # It's quite tricky to start a daemon properly.  For more information, read 
@@ -73,33 +69,50 @@ def stop_daemon():
     except IOError:
         raise SystemExit("Unable to open PID file: is the IRC bot running?")
 
-def handlePublicMessage(channel, connection, event):
-    channel.last_activity = datetime.now()
-    channel.save()
+class Bot(SingleServerIRCBot):
 
-def handleJoin(channel, connection, event):
-    users[event.source().split("!")[0]] = ""
-    channel.last_activity = datetime.now()
-    channel.headcount = len(users)
-    channel.save()
+    def __init__(self, channel, nick, password, name):
+        self.channel = channel
+        self.password = password
+        SingleServerIRCBot.__init__(self, [(channel.server, channel.port)], nick, name)
 
-def handlePart(channel, connection, event):
-    del users[event.source().split("!")[0]]
-    channel.last_activity = datetime.now()
-    channel.headcount = len(users)
-    channel.save()
+    def on_welcome(self, connection, event):
+        if self.password:
+            connection.privmsg("NickServ", "identify %s" % self.password)
+        connection.join(self.channel)
+        connection.names([self.channel.name])
 
-def handleNames(channel, connection, event):
-    global users
-    users.clear()
-    for user in event.arguments()[2].split():
-        if user[0] == "@" or user[0] == "+":
-            users[user[1:]] = ""
-        else:
-            users[user] = ""
-    channel.last_activity = datetime.now()
-    channel.headcount = len(users)
-    channel.save()
+    def on_pubmsg(self, connection, event):
+        self.channel.last_activity = datetime.now()
+        self.channel.save()
+
+    def on_join(self, connection, event):
+        try:
+            self.channel.headcount = len(self.channels.values()[0].users()) + 1
+        except:
+            # The first join event is in response to us joining the channel, so the channel isn't available in self.channels.
+            pass
+        self.channel.last_activity = datetime.now()
+        self.channel.save()
+
+    def on_part(self, connection, event):
+        self.channel.headcount = len(self.channels.values()[0].users()) - 1
+        self.channel.last_activity = datetime.now()
+        self.channel.save()
+
+    def on_kick(self, connection, event):
+        self.channel.headcount = len(self.channels.values()[0].users()) - 1
+        self.channel.last_activity = datetime.now()
+        self.channel.save()
+
+    def on_quit(self, connection, event):
+        self.channel.headcount = len(self.channels.values()[0].users()) - 1
+        self.channel.last_activity = datetime.now()
+        self.channel.save()
+
+    def on_namreply(self, connection, event):
+        self.channel.last_activity = datetime.now()
+        self.channel.save()
 
 class Command(BaseCommand):
 
@@ -108,7 +121,7 @@ class Command(BaseCommand):
 
     def handle(self, action=None, **options):
 
-        if action is None or action not in ("start", "stop"):
+        if action not in ("start", "stop"):
             print "You need to specify whether you want to start or stop the server."
             return
 
@@ -119,20 +132,9 @@ class Command(BaseCommand):
                 # We assume only one channel is configured.
                 channel = IRCChannel.objects.get()
 
-                irc.add_global_handler("join", partial(handleJoin, channel))
-                irc.add_global_handler("part", partial(handlePart, channel))
-                irc.add_global_handler("quit", partial(handlePart, channel))
-                irc.add_global_handler("kick", partial(handlePart, channel))
-                irc.add_global_handler("namreply", partial(handleNames, channel))
-                irc.add_global_handler("pubmsg", partial(handlePublicMessage, channel))
+                bot = Bot(channel, nick, password, name)
+                bot.start()
 
-                server = irc.server()
-                server.connect(channel.server, channel.port, nick, ircname=name)
-                if password is not None:
-                    server.privmsg("NickServ", "identify %s" % password)
-                server.join(channel.name)
-
-                irc.process_forever()
             except Exception, e:
                 log_file = open(log_filename, "ab")
                 log_file.write(str(e) + "\n")

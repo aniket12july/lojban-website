@@ -20,21 +20,21 @@ If there's a problem with the bot or for some reason #lojban is deserted or real
                             {% if irc.hours_since_activity %}
                                 Somebody last spoke <strong>
                                 {% if irc.hours_since_activity|gt:1 %}
-                                    {{irc.hours_since_activity}} hours
+                                    {{irc.hours_since_activity|apnumber}} hours
                                 {% else %}
                                     an hour
                                 {% endif %}
                                 {% if irc.minutes_since_activity %}
-                                    and {{irc.minutes_since_activity}} minute{{irc.minutes_since_activity|pluralize}}
+                                    and {{irc.minutes_since_activity|apnumber}} minute{{irc.minutes_since_activity|pluralize}}
                                 {% endif %}
                                 ago</strong>.
                             {% else %}
-                                Somebody last spoke <strong>{{irc.minutes_since_activity}} minute{{irc.minutes_since_activity|pluralize}} ago</strong>.
+                                Somebody last spoke <strong>{{irc.minutes_since_activity|apnumber}} minute{{irc.minutes_since_activity|pluralize}} ago</strong>.
                             {% endif %}
                         {% endif %}
                     {% endif %}
-                    <a href="/community/irc/">Hop in and say <span lang="jbo">coi</span>!</a>
                 {% endif %}
+                <a href="/community/irc/">Hop in and say <span lang="jbo">coi</span>!</a>
             </p>
         </div>
     {% endif %}

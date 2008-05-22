@@ -89,7 +89,7 @@ class IRCChannel(models.Model):
     def _current_activity(self):
         try:
             days, hours, minutes = self.last_activity_parsed
-            if days == 0 and hours == 0 and minutes == 0:
+            if days == 0 and hours == 0 and minutes < 5:
                 return True
             else:
                 return False
